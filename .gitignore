@@ -1,0 +1,8 @@
+*/bin/
+*.jar
+*.iml
+.idea/
+.gitignore~
+.gitignore
+*.[oa]
+*~
