@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定位与居中</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box box1">
+			第一种居中，查看<b>.box1</b>样式，只适合宽高固定的情况
+			<span class="semicicle semicicle-left"></span>
+			<span class="semicicle semicicle-right"></span>
+		</div>
+
+		<div class="box box2">
+			第二种居中，查看<b>.box2</b>样式，宽高不固定也适用
+			<span class="semicicle semicicle-left"></span>
+			<span class="semicicle semicicle-right"></span>			
+		</div>
+
+		<div class="box box3">
+			第三种居中，查看<b>.box3</b>样式，宽高不固定也适用
+			<span class="semicicle semicicle-left"></span>
+			<span class="semicicle semicicle-right"></span>			
+		</div>
+
+		<ul class="btn-bar">
+			<li class="btn btn-cur">方法一</li>
+			<li class="btn">方法二</li>
+			<li class="btn">方法三</li>
+		</ul>
+	</div>
+
+	<script>
+		var $btn = $('.btn');
+		var $box = $('.box');
+
+		var index;
+
+		$btn.click(function(event) {
+			$(this).addClass('btn-cur').siblings().removeClass('btn-cur');
+			index =  $(this).index();
+
+			$box.eq(index).show().siblings('.box').hide();
+		});
+	</script>
+</body>
+</html>

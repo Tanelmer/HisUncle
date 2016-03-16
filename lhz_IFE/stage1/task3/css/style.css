@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+.wrap {
+	min-width: 960px;
+	padding: 20px;
+	background-color: #eee;
+}
+img {
+	width: 80px;
+	height: 80px;
+	border: 1px solid #ccc;
+}
+
+.team, .personal {
+	float: left;
+	background-color: #fff;
+}
+.main {
+	float: left;
+	width: 100%;
+}
+.container {
+	padding-left: 220px;
+	padding-right: 140px;
+}
+article {
+	padding: 20px;
+	line-height: 20px;
+	border: 1px solid #aaa;
+	background-color: #fff;
+}
+article h3 {
+	margin-bottom: 20px;
+}
+article p {
+	margin-bottom: 1em;
+	text-indent: 2em;
+}
+.team, .personal {
+	box-sizing: border-box;
+	padding: 20px;
+	border: 1px solid #aaa;
+}
+.team {
+	width: 200px;
+	margin-left: -100%;
+}
+.team img {
+	float: left;
+	margin-right: 20px;
+}
+.personal {
+	width: 120px;
+	margin-left: -120px;
+	font-size: 0;
+}
+.personal a{
+	display: block;
+	margin-bottom: 20px;
+}
