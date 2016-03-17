@@ -9,17 +9,21 @@
     <meta name="description" content="">
     <meta name="author" content="elmer">
     <!--css,js-->
-    <style type="text/css"></style>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/task02.css">
+    <link rel="shortcut icon" href="http://www.elmerlxy.com/team-ico.ico">
 </head>
 <body>
 <header>
-    <h1>HisUncle 一级标题</h1>
-    <ul>
-        <li><a href="javascript:;">导航链接一</a></li>
-        <li><a href="javascript:;">导航链接二</a></li>
-        <li><a href="javascript:;">导航链接三</a></li>
-        <li><a href="javascript:;">导航链接四</a></li>
-    </ul>
+    <nav>
+        <h1> <img src="http://www.elmerlxy.com/team-logo.png" alt="teamlog" width="60" height="60"></h1>
+        <ul>
+            <li><a href="https://github.com/Tanelmer/HisUncle" target="_blank">About us</a></li>
+            <li><a href="javascript:;">源于生活</a></li>
+            <li><a href="javascript:;">学无止境</a></li>
+            <li><a href="javascript:;">乐在分享</a></li>
+        </ul>
+    </nav>
 </header>
 <main>
 <!--第一篇-->
@@ -109,8 +113,13 @@
         <li>排名2</li>
         <li>排名3</li>
     </ol>
-    <p>下面是个表格，加了一像素边框</p>
-    <table border="1">
+    <p>下面是个表格，加了很多样式</p>
+    <table  id="table-1">
+        <thead>
+        <th>WHO</th>
+        <th>WE</th>
+        <th>ARE</th>
+        </thead>
         <tbody>
         <tr>
             <td>妹子失恋了</td>
@@ -146,16 +155,16 @@
 </article>
 <!--表单-->
 <article>
-    <h2>表单来一份--标题</h2>
+    <h2>表单来一份--老板</h2>
 
-    <h3>表单来一份</h3>
+    <h3>好的，客官，马上就来。</h3>
     <fieldset>
         <legend><h4>form表单元素</h4></legend>
         <form action="" method="post">
             <h4>输入框类</h4>
 
             <p>input text文本框<input type="text" value="" maxlength="10" autofocus="autofocus" autocomplete="on"
-                                   disabled="" placeholder="请输入。。。。"></p>
+                                   placeholder="请输入。。。。"></p>
 
             <p>input password密码框<input type="password" value="" maxlength="10" autofocus="autofocus" autocomplete="on"
                                        placeholder="请输入。。。。"></p>
@@ -178,7 +187,8 @@
 
             <h4>选择类</h4>
 
-            <p>select 下拉菜单
+            <p>
+                select 下拉菜单
                 <select>
                     <option>请选择</option>
                     <option>长沙</option>
@@ -186,7 +196,8 @@
                     <option>杭州</option>
                 </select>
             </p>
-            <p>radio 单选
+            <p>
+                radio 单选
                 <label><input type="radio" value="男">男</label>
                 <label><input type="radio" value="女" checked="checked">女</label>
             </p>
@@ -205,7 +216,7 @@
             </p>
     </fieldset>
     <fieldset>
-        <legend><h4>HTML5新增表单元素</h4></legend>
+        <legend><h1>HTML5新增表单元素</h1></legend>
         <p>color生成一个颜色选择器<input type="color"></p>
 
         <p>data生成日期选择器<input type="date"></p>
