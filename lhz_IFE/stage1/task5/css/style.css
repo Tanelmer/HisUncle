@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+.header {
+	width: 100%;
+	height: 65px;
+	line-height: 65px;
+	background-color: #333;
+}
+.logo {
+	float: left;
+	margin: 10px 0 0 30px;
+}
+.nav {
+	float: right;
+	margin-right: 30px;
+}
+.nav li {
+	float: left;
+	margin-left: 24px; 
+	list-style: initial;
+}
+.item {
+	color: #fff;
+	text-decoration: none;
+}	
+.cur {
+	color: #cdf;
+}
+
+
+.container {
+	padding: 20px;
+	background-color: #ccc;
+}
+.mbd {
+	float: left;
+	margin-right: 420px;
+}
+.article {
+	margin-bottom: 20px;
+	padding: 20px;
+	box-shadow: 2px 2px 3px #333;
+	background-color: #fff;
+}
+.tt {
+	margin: .6em 0;
+}
+.sub-tt {
+	margin: 1em 0;
+	color: #666;
+}
+.info {
+	margin-bottom: .6em;
+	color: #666;
+}
+.author {
+	margin-right: 2em;
+}
+.article p {
+	margin-bottom: .6em;
+	text-indent: 2em;
+}
+.article img {
+	max-width: 60%;
+	margin: .6em 0;
+}
+.imgs {
+	margin-top: 26px;
+	font-size: 0;
+}
+.imgs li {
+	display: inline-block;
+	width: 130px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+h5.img-tt {
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: normal;
+}
+.imgs img {
+	width: 90%;
+}
+
+
+.aside {
+	box-sizing: border-box;
+	float: left;
+	width: 400px;
+	margin-left: -400px;
+	padding: 20px;
+	box-shadow: 2px 2px 3px #333;
+	background-color: #fff;
+}
+.aside-tt {
+	margin-bottom: 20px;
+	padding-left: 20px;
+	border-left: 3px solid #ccc;
+}
+.form-tb tr td{
+	height: 30px;
+}
+.label {
+	padding-right: 16px;
+	font-size: 12px;
+	text-align: right;
+}
+.tip {
+	font-size: 12px;
+	color: #666;
+}
+.sbt {
+	text-align: center;
+}
+.sbt button {
+	width: 260px;
+	height: 36px;
+	border: 0;
+	border-radius: 8px;
+	background-color: #38e;
+	color: #fff;
+	outline: 0;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+	.nav {
+		display: none;
+	}
+	.mbd {
+		float: none;
+		margin: 0;
+	}
+	.aside {
+		display: none;
+	}
+}
+
+.footer {
+	height: 65px;
+	line-height: 65px;
+	background-color: #333;
+	text-align: center;
+	color: #fff;
+}
