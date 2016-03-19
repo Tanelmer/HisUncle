@@ -1,0 +1,126 @@
+body {
+	margin:0;
+}
+
+#container {
+	width:500px;
+	margin:0 auto;
+	background: white;
+	padding: 20px;
+	text-align: center;
+}
+input[type=text] {
+	width:100px;
+}
+
+input[type=text]:focus {
+	animation:input_width 2s;
+	-moz-animation-timing-function: linear;
+	-webkit-abimation-timing-function:linear;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+
+}
+@keyframes input_width {
+	form {width:100px;}
+	to { width:200px;}
+}
+
+#table_part {
+	margin-bottom: 20px;
+	padding: 20px;
+	font-size: 12px;
+}
+#table_part table {
+	margin:0 auto;
+	width:200px;
+}
+
+tbody tr:nth-child(1),tr:nth-child(2),tr:nth-child(3) {
+	color:red;
+}
+
+thead tr:nth-child(1) {
+	background: black;
+	color:white;
+	text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+	background: white;
+}
+
+tbody tr:nth-child(even) {
+	background: #ccc;
+}
+
+.tab_container {
+
+	width:200px;
+	overflow: hidden;
+	position: relative;
+	margin:0 auto;
+	margin-top:20px;
+}
+
+.tab_list {
+		width: 300%;
+		height: 100%;
+		position: relative;
+		left: 0;
+		font-size: 0;
+		word-spacing: 0;
+		letter-spacing: 0;
+}
+
+.list {
+	width:200px;
+	height:200px;
+	display: inline-block;
+}
+
+.list:nth-child(1) {
+	background: red;
+}
+.list:nth-child(2) {
+	background: blue;
+}
+
+.list:nth-child(3) {
+	background: green;	
+}
+
+.tab {
+	position: absolute;
+	right:0;
+	bottom: 0;
+	
+}
+
+.tab_list {
+	
+}
+
+.tab a {
+	font-size:20px;
+	width:20px;
+	height:20px;
+	line-height: 20px;
+	background: white;
+	margin-left: 5px;
+
+}
+
+#one:target~ .tab_list {
+	margin-left:0;
+}
+
+
+#two:target~ .tab_list {
+	margin-left:-100%;
+}
+
+#three:target~ .tab_list {
+	margin-left:-200%;
+}
+
