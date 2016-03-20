@@ -1,0 +1,204 @@
+body {
+			margin:0;
+	}
+.grid-container {
+	width:100%;
+	padding-top:20px;
+
+}
+
+.row {	
+	margin-right: 20px;
+	display:flex;
+	display:-moz-flex;
+	display:-webkit-flex;
+	flex-flow:row wrap;
+	-webkit-flow:row wrap;
+} 
+
+[class*='col-'] {
+	margin-left:20px;
+	height:50px;
+	min-height:1px;
+	border:1px solid #999;
+	background: #eee;
+	color:red;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	margin-bottom: 20px; /*起初我在row上设置的margin-top 但是当在md中因为宽度问题下来的同一个row元素 是没有margin-top 所以margin-top 设置在每一个column中*/
+} /*为每一个colum设置一个margin-left  并且设置border-box*/
+
+@media (min-width:768px) {
+	.col-md-1{
+		flex:0 0 calc(8.3333333% - 20px) ;    /*flex  flex-grow 默认为0  不放大 	 */
+		-webkit-flex:0 0 calc(8.3333333% - 20px);
+	}
+	.col-md-2{
+		flex:0 0 calc(16.6666667% - 20px);
+		-webkit-flex:0 0 calc(16.6666667% - 20px);
+	}
+	.col-md-3{
+		flex:0 0 calc(25% - 20px);
+		-webkit-flex:0 0 calc(25% - 20px);
+	}
+	.col-md-4{
+		flex:0 0 calc(33.3333333% - 20px);
+		-webkit-flex:0 0 calc(33.3333333% - 20px);
+	}
+	.col-md-5 {
+		flex:0 0 calc(41.6666667% - 20px);
+		-webkit-flex:0 0 calc(41.6666667% - 20px);
+	}
+	.col-md-6{
+		flex:0 0 calc(50% - 20px);
+		-webkit-flex:0 0 calc(50% - 20px);
+	}
+	.col-md-7{
+		flex:0 0 calc(58.3333333% - 20px);
+		-webkit-flex:0 0 calc(58.3333333% - 20px);
+	}
+	.col-md-8{
+		flex:0 0 calc(66.6666667% - 20px);
+		-webkit-flex:0 0 calc(66.6666667% - 20px);
+	}
+	.col-md-9{
+		flex:0 0 calc(75% - 20px);
+		-webkit-flex:0 0 calc(75% - 20px);
+	}
+	.col-md-10{
+		flex:0 0 calc(83.3333333% - 20px);
+		-webkit-flex:0 0 calc(83.3333333% - 20px);
+	}
+	.col-md-11{
+		flex:0 0 calc(91.6666667% - 20px);
+		-webkit-flex:0 0 calc(91.6666667% - 20px);
+	}
+	.col-md-12{
+		flex:0 0 calc(100% - 20px);
+		-webkit-flex:0 0 calc(100% - 20px);
+	}
+
+	.col-md-1:before {
+		content:"一栏";
+	}
+	.col-md-2:before {
+		content:"二栏";
+	}
+	.col-md-3:before {
+		content:"三栏";
+	}
+	.col-md-4:before {
+		content:"四栏";
+	}
+	.col-md-5:before {
+		content:"五栏";
+	}
+	.col-md-6:before {
+		content:"六栏";
+	}
+	.col-md-7:before {
+		content:"七栏";
+	}
+	.col-md-8:before {
+		content:"八栏";
+	}
+	.col-md-9:before {
+		content:"九栏";
+	}
+	.col-md-10:before {
+		content:"十栏";
+	}
+	.col-md-11:before {
+		content:"十一栏";
+	}
+	.col-md-12:before {
+		content:"十二栏";
+	}	
+}
+@media (max-width:768px) {
+	.col-sm-1{
+		flex:0 0 calc(8.3333333% - 20px) ;    /*flex  flex-grow 默认为0  不放大 	 */
+		-webkit-flex:0 0 calc(8.3333333% - 20px);
+	}
+	.col-sm-2{
+		flex:0 0 calc(16.6666667% - 20px);
+		-webkit-flex:0 0 calc(16.6666667% - 20px);
+	}
+	.col-sm-3{
+		flex:0 0 calc(25% - 20px);
+		-webkit-flex:0 0 calc(25% - 20px);
+	}
+	.col-sm-4{
+		flex:0 0 calc(33.3333333% - 20px);
+		-webkit-flex:0 0 calc(33.3333333% - 20px);
+	}
+	.col-sm-5 {
+		flex:0 0 calc(41.6666667% - 20px);
+		-webkit-flex:0 0 calc(41.6666667% - 20px);
+	}
+	.col-sm-6{
+		flex:0 0 calc(50% - 20px);
+		-webkit-flex:0 0 calc(50% - 20px);
+	}
+	.col-sm-7{
+		flex:0 0 calc(58.3333333% - 20px);
+		-webkit-flex:0 0 calc(58.3333333% - 20px);
+	}
+	.col-sm-8{
+		flex:0 0 calc(66.6666667% - 20px);
+		-webkit-flex:0 0 calc(66.6666667% - 20px);
+	}
+	.col-sm-9{
+		flex:0 0 calc(75% - 20px);
+		-webkit-flex:0 0 calc(75% - 20px);
+	}
+	.col-sm-10{
+		flex:0 0 calc(83.3333333% - 20px);
+		-webkit-flex:0 0 calc(83.3333333% - 20px);
+	}
+	.col-sm-11{
+		flex:0 0 calc(91.6666667% - 20px);
+		-webkit-flex:0 0 calc(91.6666667% - 20px);
+	}
+	.col-sm-12{
+		flex:0 0 calc(100% - 20px);
+		-webkit-flex:0 0 calc(100% - 20px);
+	}
+	.col-sm-1:before {
+		content:"一栏";
+	}
+	.col-sm-2:before {
+		content:"二栏";
+	}
+	.col-sm-3:before {
+		content:"三栏";
+	}
+	.col-sm-4:before {
+		flex:2;
+	}
+	.col-sm-5:before {
+		content:"五栏";
+	}
+	.col-sm-6:before {
+		content:"六栏";
+	}
+	.col-sm-7:before {
+		content:"七栏";
+	}
+	.col-sm-8:before {
+		content:"八栏";
+	}
+	.col-sm-9:before {
+		content:"九栏";
+	}
+	.col-sm-10:before {
+		content:"十栏";
+	}
+	.col-sm-11:before {
+		content:"十一栏";
+	}
+	.col-sm-12:before {
+		content:"十二栏";
+	}
+}
