@@ -58,3 +58,33 @@ function test_num(num) {
     return false;
   }
 }
+
+/*冒泡排序*/
+function sort(num) {
+  var len = num.length,
+      i,
+      j,
+      temp;
+  for(i = len-1;i>=1;i--) {
+    for(j=0;j <= i-1;j++) {
+      if(num[j] > num[j+1]) {
+        temp = num[j];
+        num[j] = num[j+1];
+        num[j+1] = temp;
+      }
+    }
+    
+  }
+
+  return num;
+}
+
+function num_range(num,left,right) {
+  
+  var get_num = parseInt(num);
+  if( (num >= left && num <= right) ) {
+    return true;
+  } else {
+    return false;
+  }
+}
