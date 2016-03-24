@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task004</title>
+	<style type="text/css">
+		body,html {
+			height:100%;
+			margin:0;
+		}
+
+		#container {
+			
+			width:100%;
+			height:100%;
+			background: white;
+			display:flex;
+			display:-moz-flex;
+			display:-webkit-flex;
+			flex-direction:row;
+			justify-content:center;
+			-moz-justify-content:center;
+			-webkit-justify-content:center;
+			align-items:center;
+			-moz-align-items:center;
+			-webkit-align-items:center;
+
+		}
+		
+		#child {
+			width:400px;
+			height:200px;
+			background: #ccc;
+			position: relative;
+			overflow: hidden;
+
+		}
+
+		#circleA,#circleB {
+			width:100px;
+			height:100px;
+			background: #fc0;
+			position: absolute;
+			border-radius: 50%;
+		}
+
+		#circleA {
+			left:-50px;
+			top:-50px;
+		}
+
+		#circleB {
+			right:-50px;
+			bottom: -50px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="child">
+			<div id="circleA"></div>
+			<div id="circleB"></div>
+		</div>
+	</div>
+</body>
+</html>
