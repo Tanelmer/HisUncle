@@ -88,3 +88,52 @@ function num_range(num,left,right) {
     return false;
   }
 }
+
+function test_input_null(text) {
+  if(!text) {
+    alert("请输入内容");
+    return false;
+  }
+  return true;
+
+}
+
+function addClass(element,classValue) {
+  var oldClass = element.getAttribute("class");
+
+  var newClass = null;
+  if(oldClass !== null) {  //不为空的时候 将返回的string类型值转换成数组 判断新添加的样式是否存在后在进行添加
+    var oldClassNums = oldClass.split(" ");
+    var length = oldClassNums.length;
+    for(var i = 0;i < length;i++ ) {
+        if(oldClassNums[i] === classValue) {  //indexOf判断
+            return;
+        }
+    }
+    newClass = oldClassNums + " " + classValue;
+    element.setAttribute("class",newClass);
+  } else {
+    element.setAttribute("class",classValue);  //如果元素之前的样式为空 直接设置值
+  }
+}
+
+
+function removeClass(element,classValue) {
+  var oldClass = element.getAttribute("class");
+  
+  var newClass = null;
+  if(oldClass !== null) {
+    var oldClassNums = oldClass.split(" ");
+
+    for(var i = 0,len = oldClassNums.length;i < len;i+=1) {
+      if(oldClassNums[i] == classValue) {
+        oldClassNums.splice(i,1);
+        newClass = oldClassNums.join(" ");
+        element.setAttribute("class",newClass);
+      }
+    }
+    
+  }
+
+
+}
