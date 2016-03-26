@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body {
+			margin:0;
+		}
+
+    .aqi-chart-wrap {
+      display:flex;
+      display:-moz-flex;
+      display:-weblit-flex;
+      flex-direction:row;
+      align-items:flex-end;
+      
+      width:100%;
+      flex-wrap:nowrap;  /*不换行是当以天 或者 以周的形式的时候 表过于长  允许它横向的滚动 */
+      overflow: auto;
+    }
+
+    .day {
+      width:10px;
+      background: red;
+      margin-right: 2px;
+    }
+    
+    .month {
+      width:30px;
+      background: green;
+      margin-right: 6px;
+    }
+    
+    .week {
+      width:20px;
+      background: blue;
+      margin-left: 4px;
+
+    }
+
+
+
+	</style>
+</head>
+<body>
+	<fieldset id="form-gra-time">
+    <legend>请选择日期粒度：</legend>
+    <label>日<input name="gra-time" value="day" type="radio" checked="checked"></label>
+    <label>周<input name="gra-time" value="week" type="radio"></label>
+    <label>月<input name="gra-time" value="month" type="radio"></label>
+  </fieldset>
+
+  <fieldset>
+    <legend>请选择查看的城市：</legend>
+    <select id="city-select">
+      <!-- <option value="1" selected='selected'>北京</option>
+      <option value="2" >上海</option>
+      <option value="3">广州</option>
+      <option value="4">深圳</option>
+      <option value="5">成都</option>
+      <option value="6">西安</option>
+      <option value="7">福州</option>
+      <option value="8">厦门</option>
+      <option value="9">沈阳</option>
+       -->
+    </select>
+  </fieldset>
+
+  <div class="aqi-chart-wrap">
+    
+  
+  </div>
+  <script type="text/javascript" src="base.js"></script>
+  <script type="text/javascript" src="task.js"></script>
+</body>
+</html>

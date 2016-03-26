@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body {
+			margin:0;
+		}
+
+		p {
+			color:green;
+		}
+
+		table {
+			background: red;
+			width:100px;
+		}
+	</style>
+</head>
+<body>
+	<p>asdasd</p><!-- 关于重置页面元素css的一些思考    浏览器为了更好的展现与布局   为默认的为某些元素加上一些style 例如p的 margin-top margin-down   ul的margin-top margin-down padding-left  有的时候我们并不想或者想要使用我们自己的style  这就涉及到重置页面的css属性  有这种 *{margin：0; padding:0}  把页面所有元素的样式都重置了 这样存在一定的问题  就是有些元素并不需要重置  比如div  当我们再为div进行css设置时 在构建渲染树的时候查找的时候就会多这*{}的一层(关于这部分的机制不是很了解 欢迎交流)    并且*会造成短路效应  * {color:red;} 的css权重是0000   是高于继承的css的  也就是 下面的结构 <p >222<em>1112232</em></p>  为p设置的样式会被*给代替 无法继承   解决:当我们很少的使用一个元素的时候,可以在使用它的时候在进行css的设置(重置),这样也能减少一定的CSS的体积-->
+
+	<ul>
+		<li>1</li>
+		<li>2</li>
+	</ul>
+
+	<p >222<em>1112232</em></p>
+	
+	<table>
+		<tr>
+			<td></td><td>asdasd</td>
+		</tr>
+		<tr>
+			<td colspan="2">ss</td>
+		</tr>
+		<tr>
+			<td>
+				<p style="width:10px;word-wrap:break-word;word-break:break-all;">psadsda</p>  
+			</td>
+		</tr>
+	</table>
+	<!-- 这个是在前段时间遇到的问题  就是td的宽度是完全的由内容决定的  无法在td上进行宽度的设置  当时的场景是我不希望td的宽度太宽   我的解决方案是在td里面加一个p标签  在对p标签进行一些css的设置 来进行宽度的调控
+	使用table布局有可能为了布局效果在页面中加入空的标签<td></td>  这样并不好   比如下面的场景 我通过表头的宽度 来影响下面排布的样式  就需要增加空的表头<th>   并且table布局由于大量的tr td标签比普通的页面标签产生更多的字节 table 还会阻挡浏览器引擎的渲染顺序 还有你的雪碧图用不了了 这种情况下增加了http请求  关于table布局的优缺点 我参考了http://www.html5tricks.com/why-not-table-layout.html     -->
+	<table style="width:100px; margin-top:10px;">
+		<tr>
+			<th style="width:20px;"></th><th style="width:20px;"></th>
+		</tr>
+		<tr>
+			<td>sdsa</td><td>dasd</td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body,#left,#right,#middle,#container{
+			padding: 20px;
+			background-color:#eee;
+			border:1px solid #999;
+			
+		}
+		body {
+			margin:0;
+		}
+
+		#container {
+			overflow: hidden;
+			border:1px solid #999;
+		}
+
+
+		#left {
+			width:200px;
+			float:left;
+			margin-right: 20px;
+
+			
+		}
+
+		#right {
+			width:120px;
+			float:right;
+			margin-left:20px;
+		}
+		
+		#middle {
+			overflow:hidden;
+		}
+
+		ul {
+			list-style:none;
+			padding-left: 0;
+		}
+
+		#left,#right {
+			box-sizing:border-box;
+			-moz-box-sizing:border-box;
+			-webkit-box-sizing:border-box;
+		}
+		#right img {
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="left">
+			<div>
+				<img src="team.png" alt="team" style="vertical-align:middle;">
+				<p style="display:inline-block; font-size:10px;">来自远方的他叔叔军团</p>
+			</div>
+		</div>
+		<div id="right">
+			<ul>
+				<li>
+					<img src="team.png" alt="">
+				</li>
+				<li>
+					<img src="team.png" alt="">
+				</li>
+				<li>
+					<img src="team.png" alt="">
+				</li>
+			</ul>
+		</div>
+		<div id="middle">
+			<h2>团队介绍</h2>
+			<p>奔向远方的小伙伴</p>
+		</div>
+	</div>
+</body>
+</html>
