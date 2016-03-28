@@ -12,7 +12,9 @@
 
   function split_text(value) {
     var str = value;
-    var num = str.split(/[\n,，.．;； 　]+/);/*这里的+是匹配多个  也就是;;也就惊醒匹配拆分*/
+    /* str="2;" 通过split(";")会变成一个2 一个""  通过正则把后面的;等replace然后在split*/
+    var get_str = trim(str.replace(/[\n,，.．;； 　]+$/,""));
+    var num = get_str.split(/[\n,，.．;； 　]+/);/*这里的+是匹配多个  也就是;;也就惊醒匹配拆分*/
     return num;
   }
 
@@ -64,6 +66,7 @@
     var text = trim($("test").value);
     if(test_input_null(text)) {
       var get_num =  split_text(text);
+      console.log(get_num);
       for(var i =0,len = get_num.length;i < len;i+=1) {
         num.push(get_num[i]);
       }

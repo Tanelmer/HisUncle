@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task021</title>
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<style type="text/css">
+		.normal {
+			display: inline-block;
+			font-size: 16px;
+			width:80px;
+			height:50px;
+			line-height: 50px;
+			background: #89C9FE;
+			text-align: center;
+			margin-right: 10px;
+			cursor:pointer;
+
+		}
+
+		.show_part {
+			margin-top: 10px;
+			font-size: 0;
+		}
+
+		
+		.select {
+			background: green;
+		}
+		
+		.show_part div:hover::before {
+			content:"删除";
+
+		}
+
+		.show_part div:hover {
+		  width:100px;
+		  transition: width 1s;
+		  -moz-transition:width 1s;
+		  -webkit-trabsition: width 1s;
+		  background: red;
+		}
+
+		section {
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<label >tag:</label><input type="text" id="input_up">
+		<div class="show_part" id="up"></div>
+	</section>
+	<section>
+		<textarea id="input_down" cols="30" rows="10" ></textarea></br>
+		<input type="button" id="add_btn" value="确认兴趣爱好" class="block">
+		<div class="show_part" id="down"></div>
+	</section>
+	
+	
+<script type="text/javascript" src="../base.js"></script>
+<script type="text/javascript" src="task021.js"></script>
+
+
+</body>
+</html>
