@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+body, p, ul, li, h1, h2, h3, h4, h5 {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+img{
+	border: 0;
+}
+
+.clearfix:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}

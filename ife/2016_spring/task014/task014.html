@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body {
+			margin:0;
+		}
+
+		ul {
+			list-style: none;
+			padding-left: 0;
+		}
+	</style>
+</head>
+<body>
+	<h3>污染城市列表</h3>
+  <ul id="aqi-list">
+	
+  </ul>
+	<script type="text/javascript">
+		(function(){
+			var aqiData = [
+				["北京", 90],
+				["上海", 50],
+				["福州", 10],
+				["广州", 50],
+				["成都", 90],
+				["西安", 100]
+			];
+
+
+			var sort_result = aqiData.sort(function(a,b){
+				return (a[1] < b[1] ? 1:-1);
+			});
+			
+			var filter_result = sort_result.filter(function(num){
+				if(num[1] >= 60) {
+					return num;
+				}
+			});
+
+			var fragment = document.createDocumentFragment();
+			var length = filter_result.length;
+			for(var i = 0 ;i < length;i+=1) {
+				var textNode = document.createTextNode('第' + (i+1) + '名:' + filter_result[i][0] + filter_result[i][1] );
+				var ele = document.createElement("li");
+				ele.appendChild(textNode);
+				fragment.appendChild(ele);
+			}
+
+			var set_ul = document.getElementById("aqi-list");
+			set_ul.appendChild(fragment);
+
+
+		})();
+	</script>
+</body>
+</html>

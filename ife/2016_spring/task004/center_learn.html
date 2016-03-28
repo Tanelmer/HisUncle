@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body {
+			margin:0;
+		}
+		#test {
+			width:100px;
+			margin:0 auto;
+			background: red;
+		}
+
+		#inline-block-center div {
+			width:100px;
+			height:100px;
+			background: red;
+			display: inline-block;
+		}
+		#inline-block-center {
+
+			margin-top: 20px;
+			text-align: center;
+		}
+
+		#flexbox-center {
+			margin-top: 20px;
+			display:-moz-flex;
+			display:-webkit-flex;
+			display:flex;
+			justify-content:center;
+			flex-direction:row;
+			
+		}
+
+		#flexbox-center div {
+			width:100px;
+			height:100px;
+			background: red;
+			margin-right: 10px;
+		}
+		
+
+
+		
+
+		.vertical_inline {
+			height:100px;
+			width:100px;
+			background: red;
+			margin:20px auto 0 auto;
+			padding-top: 40px;
+			padding-bottom: 40px;
+			box-sizing:border-box;
+		}
+
+		.vertical-single {
+			background: green;
+			height:100px;
+			line-height: 100px;
+			white-space: nowrap;
+			width:100px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		
+		.vertical-multi {
+			display: table-cell;
+			height:100px;
+			width:100px;
+			background: red;
+			vertical-align: middle;
+		}
+
+		table {
+			width:100px;
+			height:100px;
+			background: lightgray;
+		}
+
+		.known-height {
+			height:300px;
+			width:300px;
+			background: lightgray;
+			position: relative;
+		}
+		
+		.known-height div {
+
+			position: absolute;
+			width:100px;
+			height:100px;
+			background: red;
+			top:50%;
+			margin-top:-50px;
+
+
+		}
+		
+	</style>
+</head>
+<body>
+	<p style="text-align:center;">ssss</p>  <!--inline 或者 inline-* 可以在block级的父元素中设置text-align:center -->
+
+	<div id="test">s</div>  <!-- 一个有宽度的block level 可以通过margin:0 auto; -->
+
+
+	<div id="inline-block-center">
+		<div >aa</div>
+		<div >bb</div>
+		<div >cc</div>
+	</div>  <!--对于多个块级的水平居中 inline-block  -->
+
+	<div id="flexbox-center">
+		<div >ss</div>
+		<div>bb</div>
+		<div>cc</div>
+	</div>  <!--对于多个块级的水平居中  flexbox的justify-content 属性 flex-start flex-end center space-between space-around  垂直方向的对齐  align-item flex-start flex-end center baseline (子单元中第一行文字的基线) stretch 占据整个容器的高度  align-self 可以设置自身的垂直的对齐方式  值同上 -->
+	
+	<p class="vertical_inline">aaaaaa</p>  <!--inline 或者inline-*级别的有的时候当我们知道父元素的高度的时候  通过设置padding-top  padding-down是相同的值 但是这种方案不具备通用性    -->
+
+	<p class="vertical-single">bbb</p>  <!--单行的垂直居中  line-height == height -->
+
+	<p class="vertical-multi">ssss  sdadasdasda </p>  <!--对于多行的文本 垂直居中 可以使用table   table-cell
+	让一个标签元素以一个td元素出现-->
+
+	<table>
+		<tr>
+			<td>sadsada</td>
+		</tr>
+	</table>
+
+	<div class="known-height">
+		<div>ssss</div>
+	</div>
+
+
+</body>
+</html>
