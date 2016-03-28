@@ -1,0 +1,78 @@
+@charset "utf-8";
+/*css document*/
+@font-face {font-family: 'iconfont';
+    src: url('font/fontawesome-webfont.eot'); /* IE9*/
+    src: url('font/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('font/fontawesome-webfont.woff') format('woff'), /* chrome、firefox */
+    url('font/fontawesome-webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('font/fontawesome-webfont.svg#uxiconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    padding-left: 20px
+}
+/*head start*/
+.head{
+    height: 60px;
+    line-height: 60px;
+}
+.head{
+    background: #228AC1;
+}
+.head>h1{
+    width: 60px;
+    line-height: 60px;
+    height: 60px;
+    background: url("http://www.elmerlxy.com/team-logo.png");
+    font-size: 0;
+    background-size: 100% 100%;
+    display: block;
+    margin-left: 50px;
+    float: left;
+    cursor: pointer;
+}
+.pull-right{
+    float: right;
+}
+/*search*/
+.search{
+    margin-right: 20px;
+}
+.search input[type="text"]{
+    font-family: "微软雅黑";
+    width: 188px;
+    height: 30px;
+    line-height: 30px;
+    outline: none;
+    border: 0;
+    padding-left: 35px;
+    border-radius: 20px;
+    transition: width .3s linear;
+}
+.search input[type="text"]:focus{
+    width: 288px;
+}
+.icon-search{
+    color: #B9B9B9;
+    font-size: 18px;
+    position: relative;
+    left: 35px;
+    top: 1px;
+}
+/*login*/
+.login{
+    color: #fff;
+    margin-right: 70px;
+}
+.login>a{
+    color: #fff;
+    text-decoration: none;
+}
+.icon-user{
+    margin-right: 10px;
+}
