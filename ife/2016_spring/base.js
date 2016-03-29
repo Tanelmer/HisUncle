@@ -137,3 +137,13 @@ function removeClass(element,classValue) {
 
 
 }
+
+/*判断一个数是否在一个数组中 为了去重使用*/
+function num_exist(nums,num) {
+
+  if(nums.indexOf(num) != -1) {
+    return true;
+  } else {
+    return false;
+  }
+}
