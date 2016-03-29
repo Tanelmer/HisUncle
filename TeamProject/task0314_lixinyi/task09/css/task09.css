@@ -20,10 +20,9 @@
 .head{
     height: 60px;
     line-height: 60px;
-}
-.head{
     background: #228AC1;
 }
+
 .head>h1{
     width: 60px;
     line-height: 60px;
@@ -38,6 +37,13 @@
 }
 .pull-right{
     float: right;
+}
+.pull-left{
+    float: left;
+}
+.clearFix:before{
+    content: " ";
+    display: table;
 }
 /*search*/
 .search{
@@ -75,4 +81,77 @@
 }
 .icon-user{
     margin-right: 10px;
+}
+/*main*/
+.main{
+    margin: 0 auto;
+}
+.left-con{
+    position: fixed;
+    left: 0;
+    width: 260px;
+    height: 100%;
+    background: #2B2E3D;
+    color: #68778A;
+}
+.head-con{
+    height: 60px;
+    line-height: 60px;
+    margin: 0 auto;
+    padding:20px 50px;
+}
+
+.head-con img{
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #fff;
+    padding: 3px;
+}
+.head-con .name{
+    color: #fff;
+    font-size: 16px;
+    margin-left: 15px;
+}
+.head-info{
+    height: 40px;
+    padding: 10px 40px;
+}
+.head-info div{
+    width: 88px;
+    text-align: center;
+}
+.head-info .border-right{
+    border-left: 1px solid #fff;
+}
+
+.item-list>ul>li{
+    margin-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.item-list>ul>li:first-child{
+    background: #373D4D;
+    padding-top: 15px;
+    margin-bottom: 10px;
+}
+.item-list i{
+    margin-right: 10px;
+}
+.ul-f{
+    margin-left: 15px;
+}
+.ul-f>li{
+    padding-bottom: 15px;
+}
+.ul-f>li:first-child{
+    margin-top: 15px ;
+}
+.last-li{
+    padding-bottom: 0!important;
+}
+.active{
+    color: #fff;
+}
+.not{
+    color: #68778A;
 }
