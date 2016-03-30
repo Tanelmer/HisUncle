@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>task022</title>
+  <style type="text/css">
+	body,html {
+    width:100%;
+		margin:0;
+	}
+  #root {
+    display:flex;
+    display:-webkit-flex;
+    display:-moz-flex;
+    flex-direction:row;
+    align-items:center;
+    -webkit-align-items:center;
+    -webkit-align-content:center;
+    align-content:center;
+    width:calc(100%-80px);
+    height:200px;
+    margin:20px 40px 0 40px;
+    padding:20px;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    border:1px solid black;
+  }
+
+  .son {
+    border:1px solid black;
+    margin-right:5px;
+    flex:0 0 50%;
+    -webkit-flex:0 0 50%;
+    height:100%;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    display:flex;
+    display:-webkit-flex;
+    display:-moz-flex;
+    flex-direction:row;
+    align-items:center;
+    -webkit-align-items:center;
+    -webkit-align-content:center;
+    align-content:center;
+    padding: 20px;
+    
+  }
+  </style>
+</head>
+<body>
+
+<fieldset>
+  <legend>遍历选项</legend>
+    <input type="button" id="start" value="前序遍历">
+    <input type="button" id="middle" value="中序遍历">
+    <input type="button" id="end" value="后序遍历">
+    <label>时间间隔:<input type="text" id="input_num" >ms</label>
+</fieldset>
+<div id="root">
+  <div class="son">
+    <div class="son">
+      <div class="son"></div>
+      <div class="son"></div>
+    </div>
+    <div class="son">
+      <div class="son"></div>
+      <div class="son"></div>
+    </div>
+  </div>
+  <div class="son">
+    <div class="son">
+      <div class="son"></div>
+      <div class="son"></div>
+    </div>
+    <div class="son">
+      <div class="son"></div>
+      <div class="son"></div>
+    </div>
+  </div>
+</div>
+<section id="show_part"></section>
+<script type="text/javascript" src="../js/queue.js"></script>
+<script type="text/javascript" src="../base.js"></script>
+<script type="text/javascript" src="task022.js"></script>
+</body>
+</html>
