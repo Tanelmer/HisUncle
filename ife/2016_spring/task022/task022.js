@@ -35,7 +35,7 @@ function backOrder(node) {
 }
 
 
-
+/*我这种方式的只能遍历2叉树  访问node.children.length*/
 function render_queue(num) {
   var time = 0;
   var speed = parseInt(num); /*speed是规定绘制下一个节点的时间间隔*/
