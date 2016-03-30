@@ -106,6 +106,8 @@
     }
   }
 
+  
+
   //判断数字是否在一个数组中 为了去重使用
   base.num_exist = function(nums,num) {
     if(nums.indexOf(num) != -1) {

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>task023</title>
+  <style type="text/css">
+	body,html {
+    width:100%;
+		margin:0;
+	}
+  #root {
+
+    display:flex;
+    display:-webkit-flex;
+    display:-moz-flex;
+    flex-direction:row;
+    align-items:center;
+    -webkit-align-items:center;
+    -webkit-align-content:center;
+    align-content:center;
+    width:calc(100%-80px);
+    height:200px;
+    margin:20px 40px 0 40px;
+    padding:20px;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    border:1px solid black;
+    font-size:10px;
+  }
+
+  .son {
+    
+    border:1px solid black;
+    margin-right:5px;
+    flex:1 1 auto;
+    -webkit-flex:1 1 auto;
+    height:100%;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    display:flex;
+    display:-webkit-flex;
+    display:-moz-flex;
+    flex-direction:row;
+    align-items:center;
+    -webkit-align-items:center;
+    -webkit-align-content:center;
+    align-content:center;
+    padding: 20px;
+    
+  }
+
+  div {
+    background: white;
+  }
+  </style>
+</head>
+<body>
+
+<fieldset>
+  <legend>遍历选项</legend>
+    <input type="button" id="DF" value="深度优先">
+    <input type="button" id="BF" value="广度优先">
+    <label>时间间隔:<input type="text" id="input_num" value="1000">ms</label>
+    <label>搜索:<input type="text" id="input_text" placeholder="请输入搜索条件"></label>
+    <input type="button" id="DF_search" value="深度优先搜索">
+    <input type="button" id="BF_search" value="广度优先搜索">
+</fieldset>
+<div id="root">A
+  <div class="son">B
+    <div class="son">C
+      <div class="son">D</div>
+      <div class="son">E</div>
+    </div>
+    <div class="son">F</div>
+  </div>
+  <div class="son">G
+    <div class="son">H</div>
+  </div>
+  <div class="son">I</div>
+</div>
+<section id="show_part"></section>
+<script type="text/javascript" src="../js/base.js"></script>
+<script type="text/javascript" src="../js/queue.js"></script>
+<script type="text/javascript" src="task023.js"></script>
+</body>
+</html>
