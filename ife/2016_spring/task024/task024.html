@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>task024</title>
+  <link rel="stylesheet" type="text/css" href="../css/base.css">
+  <link rel="stylesheet" type="text/css" href="task024.css">
+</head>
+<body>
+
+<fieldset>
+  <legend>遍历选项</legend>
+    <input type="button" id="DF" value="深度优先">
+    <input type="button" id="BF" value="广度优先">
+    <label>时间间隔:<input type="text" id="input_num" value="1000">ms</label>
+    <label>搜索:<input type="text" id="input_text" placeholder="请输入搜索条件"></label>
+    <input type="button" id="DF_search" value="深度优先搜索">
+    <input type="button" id="BF_search" value="广度优先搜索">
+    <input type="button" id="delete" value="删除选择的节点"><br>
+    <label>增加节点值:<input type="text" class="mt10" id="add_text" placeholder="请输入增加节点的值">(当增加多个节点的时候 需要以逗号分隔)</label>
+    <input type="button" id="add" value="增加节点" class="ml20">
+    
+</fieldset>
+<div id="root">A
+  <div class="son">B
+    <div class="son">C
+      <div class="son">D</div>
+      <div class="son">E</div>
+    </div>
+    <div class="son">F</div>
+  </div>
+  <div class="son">G
+    <div class="son">H</div>
+  </div>
+  <div class="son">I</div>
+</div>
+<section id="show_part"></section>
+<script type="text/javascript" src="../js/base.js"></script>
+<script type="text/javascript" src="../js/queue.js"></script>
+<script type="text/javascript" src="task024.js"></script>
+</body>
+</html>

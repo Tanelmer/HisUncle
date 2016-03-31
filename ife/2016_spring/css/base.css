@@ -1,7 +1,43 @@
 .block {
-	display:block;
+  display:block;
 }
 
 .inline-block {
-	display:inline-block;
+  display:inline-block;
+}
+.mt10 {
+  margin-top:10px;
+}
+.mauto {
+  margin:0 auto;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.ml10 {
+  margin-left:10px;
+}
+.ml20 {
+  margin-left: 20px;
+}
+.bg-blue {
+  background: blue;
+}
+.bg-white {
+  background: white;
+}
+.bg-red {
+  background: red;
+}
+.w {
+  width:100%;
+}
+.w100 {
+  width:100px;
+}
+.w200 {
+  width:200px;
+}
+.w300 {
+  width: 300px;
 }
