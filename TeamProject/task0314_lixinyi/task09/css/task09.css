@@ -261,34 +261,6 @@
     padding: 17px 40px;
     background-color: #fff;
 }
-.brand-con-wrap table {
-    width: 100%;
-    border: 1px solid #ccc;
-}
-.brand-con-wrap thead {
-    font-size: 13px;
-}
-.brand-con-wrap tbody tr:hover {
-    background-color: #eee;
-}
-.brand-con-wrap td {
-    height: 25px;
-    line-height: 25px;
-}
-.row1 {
-    width: 65px;
-    text-align: center;
-}
-.row2 {
-    width: 90px;
-    text-align: center;
-}
-.row3 {
-    text-indent: 30px;
-}
-.row3 span {
-    vertical-align: middle;
-}
 .persent-100 {
     display: inline-block;
     position: relative;
@@ -306,7 +278,26 @@
     left: 0;
     background-color: #ed6e52;
 }
-
-.con-wrap {
-    background-color: #fff;
+.calender-form{
+    border-collapse: collapse;
+}
+.calender-form tr,.calender-form th,.calender-form td{
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+.row1 {
+    width: 65px;
+    text-align: center;
+}
+.row2 {
+    width: 90px;
+    text-align: center;
+}
+.row3 {
+    width: 330px;
+    text-indent: 30px;
+}
+.row3 span {
+    vertical-align: middle;
 }
