@@ -1,0 +1,312 @@
+@charset "utf-8";
+/*css document*/
+@font-face {font-family: 'iconfont';
+    src: url('font/fontawesome-webfont.eot'); /* IE9*/
+    src: url('font/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('font/fontawesome-webfont.woff') format('woff'), /* chrome、firefox */
+    url('font/fontawesome-webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('font/fontawesome-webfont.svg#uxiconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    padding-left: 20px
+}
+/*head start*/
+.head{
+    height: 60px;
+    line-height: 60px;
+    background: #228AC1;
+}
+
+.head>h1{
+    width: 60px;
+    line-height: 60px;
+    height: 60px;
+    background: url("http://www.elmerlxy.com/team-logo.png");
+    font-size: 0;
+    background-size: 100% 100%;
+    display: block;
+    margin-left: 50px;
+    float: left;
+    cursor: pointer;
+}
+.pull-right{
+    float: right;
+}
+.pull-left{
+    float: left;
+}
+.clearFix:before{
+    content: " ";
+    display: table;
+}
+/*search*/
+.search{
+    margin-right: 20px;
+}
+.search input[type="text"]{
+    font-family: "微软雅黑";
+    width: 188px;
+    height: 30px;
+    line-height: 30px;
+    outline: none;
+    border: 0;
+    padding-left: 35px;
+    border-radius: 20px;
+    transition: width .3s linear;
+}
+.search input[type="text"]:focus{
+    width: 288px;
+}
+.icon-search{
+    color: #B9B9B9;
+    font-size: 18px;
+    position: relative;
+    left: 35px;
+    top: 1px;
+}
+/*login*/
+.login{
+    color: #fff;
+    margin-right: 70px;
+}
+.login>a{
+    color: #fff;
+    text-decoration: none;
+}
+.icon-user{
+    margin-right: 10px;
+}
+/*main*/
+.main{
+    margin: 0 auto;
+}
+.left-con{
+/*    position: fixed;
+    left: 0;
+*/    width: 260px;
+    height: 100%;
+    background: #2B2E3D;
+    color: #68778A;
+}
+.head-con{
+    height: 60px;
+    line-height: 60px;
+    margin: 0 auto;
+    padding:20px 50px;
+}
+
+.head-con img{
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #fff;
+    padding: 3px;
+}
+.head-con .name{
+    color: #fff;
+    font-size: 16px;
+    margin-left: 15px;
+}
+.head-info{
+    height: 40px;
+    padding: 10px 40px;
+}
+.head-info div{
+    width: 88px;
+    text-align: center;
+}
+.head-info .border-right{
+    border-left: 1px solid #fff;
+}
+
+.item-list>ul>li{
+    margin-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.item-list>ul>li:first-child{
+    background: #373D4D;
+    padding-top: 15px;
+    margin-bottom: 10px;
+}
+.item-list i{
+    margin-right: 10px;
+}
+.ul-f{
+    margin-left: 15px;
+}
+.ul-f>li{
+    padding-bottom: 15px;
+}
+.ul-f>li:first-child{
+    margin-top: 15px ;
+}
+.last-li{
+    padding-bottom: 0!important;
+}
+.active{
+    color: #fff;
+}
+.not{
+    color: #68778A;
+}
+
+
+/**
+ *  右边日历和汽车行业品牌
+ *  by--刘恒志
+ */
+.right-con {
+    margin-left: 260px;
+    background-color: #eeeeed;
+    font-size: 12px;
+    color: #000;
+}
+.main-con {
+    width: 890px;
+    margin: 0 auto;
+}
+.calender {
+    float: left;
+    width: 350px;
+    border: 1px solid #ccc;
+}
+.con-tt {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #eee;
+    background-color: #f4f5f7;
+    text-indent: 1.5em;
+}
+.con-wrap {
+    padding: 0 15px 15px;
+}
+.time-select {
+    padding: 9px;
+    text-align: center;
+}
+.time-select div {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    border: 1px solid #ccc;
+    text-align: right;
+}
+.time-select div ul {
+    position: absolute;
+    width: 83%;
+    text-align: center;
+}
+.time-year {
+    width: 64px;
+}
+.time-month {
+    width: 85px;
+    height: 22px;
+}
+.time-date {
+    width: 75px;
+}
+.time-today {
+    width: 64px;
+    text-align: center !important;
+}
+.triangle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-right: 4px;
+    border: 5px solid #fff;
+    border-top-color: #ccc;
+    border-bottom: transparent;
+    vertical-align: middle;
+}
+.calender-main td {
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+.calender-head th {
+    line-height: 30px;
+    border-top: 1px solid #a9cfec;
+    border-bottom: 1px solid #e1e1e2;
+}
+.calender-main td:hover {
+    border: 1px solid #f7d463;
+}
+.calender-main td span {
+    display: block;
+}
+.date-today {
+    border: 1px solid #f7d463;
+}
+.fest span:nth-child(2){
+    color: #cd3539;
+}
+
+.brand {
+    float: right;
+    width: 528px;
+    border: 1px solid #ccc;
+}
+.brand-con-wrap {
+    padding: 17px 40px;
+    background-color: #fff;
+}
+.brand-con-wrap table {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+.brand-con-wrap thead {
+    font-size: 13px;
+}
+.brand-con-wrap tbody tr:hover {
+    background-color: #eee;
+}
+.brand-con-wrap td {
+    height: 25px;
+    line-height: 25px;
+}
+.row1 {
+    width: 65px;
+    text-align: center;
+}
+.row2 {
+    width: 90px;
+    text-align: center;
+}
+.row3 {
+    text-indent: 30px;
+}
+.row3 span {
+    vertical-align: middle;
+}
+.persent-100 {
+    display: inline-block;
+    position: relative;
+    width: 160px;
+    height: 4px;
+    margin-left: 23px;
+    background-color: #ccc;
+}
+.persent-80 {
+    display: inline-block;
+    position: absolute;
+    width: 128px;
+    height: 4px;
+    top: 0;
+    left: 0;
+    background-color: #ed6e52;
+}
+
+.con-wrap {
+    background-color: #fff;
+}

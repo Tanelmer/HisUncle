@@ -92,22 +92,45 @@
   	renderNum(num);
   })
 
-  var sort_btn = $('sort');
-  addListenEvent(sort_btn,'click',function() {
-    var len = num.length,
-        i,
-        j,
-        temp;
-
-    for(i = len -1;i >=1;i--) {
-      for(j = 0;j <= i-1;j++) {
-        if(num[j] > num[j+1]) {
+  
+  var flag = 0;  /*排序的动画展示部分 自己的确没有想好  抄袭了使命必达组*/
+  function sortAqiData() {
+    var i = num.length - 1;
+    var t;
+    sortAqiData.moveOne = function() {
+      renderNum(num);
+      var temp = num[i];
+      var index = i;
+      for(var j = 0;j < i;j+=1) {
+        if(flag === 0 && num[j] > temp) {
           temp = num[j];
-          num[j] = num[j+1];
-          num[j+1] = temp; 
+          index = j;
+        } else if(flag === 1 && num[j] < temp) {
+          temp = num[j];
+          index = j;
         }
       }
+      /*先从前面找到第一个比最后一个数大的位置和数字的大小*/
+      document.getElementById("show_part").children[index].style.backgroundColor = "green";
+      num.splice(index,1);
+      num.push(temp);
+      i--;
 
-      renderNum(num);
+      if(i < 0) {
+        clearInterval(t);
+        renderNum(num);
+        if(flag === 0) {
+          flag = 1;
+        } else if(flag === 1) {
+          flag = 0;
+        }
+      }
     }
+    t = setInterval("sortAqiData.moveOne()",50);
+  }
+
+  var sort_btn = $("sort");
+  addListenEvent(sort_btn,"click",function(){
+    sortAqiData();
   });
+  
