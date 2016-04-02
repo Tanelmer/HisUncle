@@ -84,13 +84,14 @@
 }
 /*main*/
 .main{
-    margin: 0 auto;
+    position: relative;
 }
 .left-con{
-/*    position: fixed;
+    position: absolute;
     left: 0;
-*/    width: 260px;
-    height: 100%;
+    top: 0;
+    bottom: 0;
+    width: 260px;
     background: #2B2E3D;
     color: #68778A;
 }
@@ -155,8 +156,383 @@
 .not{
     color: #68778A;
 }
+/**
+ * 右边导航栏
+ * 
+ */
 
+.right-nav{
+	background: #fff;
+	height: 30px;
+	padding-left: 30px;
+}
+.right-nav a{
+	color: #ccc;
+	letter-spacing: 1px;
+	margin-left: 4px;
+	line-height: 30px;
+}
+.right-nav a:hover{
+	text-decoration: none;
+}
+.right-nav a.nav_active{
+	color: #228AC1;
+}
 
+/*search操作*/
+.right-search{
+	width: 858px;
+	height: 65px;
+	margin: 20px auto 0px;
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: 15px;
+}
+.search-msg{
+	float: left;
+	margin-left: 25px;
+}
+.right-search label{
+	display: inline-block;
+	width: 50px;
+	text-align: center;
+	color: #B9B9B9;
+}
+.right-search input{
+	border: 1px solid #B9B9B9;
+	height: 25px;
+	padding-left: 5px;
+}
+.right-search input#input1{
+	width: 65px;
+	background: url(../img/2.jpg) 55px center no-repeat;
+}
+.search-both{
+	margin-bottom: 10px;
+}
+.search-both input,.search-other input.count{
+	width: 115px;
+	background: url(../img/1.jpg) 105px center no-repeat;
+}
+.search-other{
+	width: 325px;
+}
+.search-other input{
+	width: 65px;
+	background: url(../img/1.jpg) 55px center no-repeat;
+	margin-bottom: 10px;
+}
+.search-msg input[type=button]{
+	background: #228AC1;
+	color: #fff;
+	width: 60px;
+	text-align: center;
+	border-radius: 3px;
+	border: none;
+	margin-top: 20px;
+}
+.right-time{
+	height: 65px;
+	width: 890px;
+	margin: 15px auto;
+	/*background: #fff;*/
+	
+}
+.right-time li{
+	float: left;
+	background: #fff;
+	border-left: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	margin-right: 5px;
+}
+.right-time li.time{
+	width: 110px;
+    height: 65px;
+}
+.right-time span#left{
+	width: 30px;
+	height: 65px;
+	display: block;
+	background: url(../img/3.jpg) center center no-repeat;
+}
+.right-time span#right{
+	width: 30px;
+	height: 65px;
+	display: block;
+	background: url(../img/4.jpg) center center no-repeat;
+}
+.right-time li h5{
+	text-align: center;
+}
+.right-time li p{
+	color: #D2322D;
+	font-size: 20px;
+	text-align: center;
+}
+.right-time li.hover{
+	border-top: 3px solid #228AC1;
+	height: 63px;
+}
+.right-time li i{
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	color: #B9B9B9;
+}
+.right-time li.history{
+	width: 120px;
+	height: 65px;
+	margin-right: 0;
+}
+.right-time li.history span{
+	display: block;
+	line-height: 65px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #666;
+	background: url(../img/5.jpg) left center no-repeat;
+	padding-left: 55px;
+}
+.right-account{
+    width: 890px;
+    margin: 0 auto;
+}
+.right-account h4{
+    line-height: 15px;
+    margin-left: 0;
+    color: #000;
+    font-weight: normal;
+}
+.right-account li{
+    float: left;
+    width: 160px;
+    height: 40px;
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 20px;
+    margin-right: 24px;
+    margin-bottom: 15px;
+}
+.right-account li p{
+    color: #000000;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+.right-account li a{
+    color: #999999;
+    font-size: 12px;
+}
+.right-account li span{
+    display: block;
+    width: 60px;
+    height: 45px;
+    background: #43B29E;
+    position: relative;
+    left: 105px;
+    top: -45px;
+}
+.right-account li#li1{
+    border-left: 3px solid #43B29E;
+}
+.right-account li#li1 span{
+    background: #43B29E;
+}
+.right-account li#li2{
+    border-left: 3px solid #388AC1;
+}
+.right-account li#li2 span{
+    background: #388AC1;
+}
+.right-account li#li3{
+    border-left: 3px solid #D04A36;
+}
+.right-account li#li3 span{
+    background: #D04A36;
+}
+.right-account li#li4{
+    border-left: 3px solid #E2CD46;
+    margin-right: 0;
+}
+.right-account li#li4 span{
+    background: #E2CD46;
+}
+
+/**
+ *  右边第一组项目
+ *  by--刘恒志
+ */
+.project1 {
+    float: left;
+    width: 530px;
+    border: 1px solid #ccc;
+}
+.tb-con {
+    height: 310px;
+    background-color: #fff;
+}
+.tb-wrap {
+    padding: 12px 20px 23px;
+}
+.tab-btn li {
+    float: left;
+    width: 85px;
+    height: 27px;
+    line-height: 27px;
+    margin-right: 10px;
+    background-color: #ededf0;
+    text-align: center;
+}
+li.tab-btn-cur {
+    border: 1px solid #ccc;
+    border-bottom-color: #fff;
+    background-color: #fff;
+}
+.tab-con {
+    margin-top: -2px;
+    border: 1px solid #ccc;
+}
+.tab-con table {
+    width: 400px;
+    margin: 28px;
+}
+
+.project2 {
+    float: right;
+    width: 350px;
+    border: 1px solid #ccc;
+}
+.ab-wrap {
+    width: 280px;
+    margin: 0 auto;
+    padding-top: 10px;
+    text-indent: 2em;
+}
+.ab-1 {
+    padding: 6px 0;
+    border-bottom: 1px solid #ccc;
+}
+.ab-tt {
+    color: #666;
+}
+.ab-2 {
+    height: 44px;
+    line-height: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.ab-2-l {
+    float: left;
+    width: 93px;
+    height: 44px;
+    border-right: 1px solid #ccc;
+}
+.ab-3 {
+    height: 145px;
+    border-bottom: 1px solid #ccc;
+}
+.ab-search {
+    padding-top: 10px;
+    text-indent: 0;
+}
+.ab-search input {
+    vertical-align: middle;
+}
+.ab-search-btn {
+    float: right;
+    width: 50px;
+    height: 25px;
+    margin-top: -5px;
+    border: 0;
+    background-color: #388ac1;
+    color: #fff;
+}
+/**
+ *  右边第一组项目
+ *  by--刘恒志
+ */
+.project1 {
+    float: left;
+    width: 530px;
+    border: 1px solid #ccc;
+}
+.tb-con {
+    height: 310px;
+    background-color: #fff;
+}
+.tb-wrap {
+    padding: 12px 20px 23px;
+}
+.tab-btn li {
+    float: left;
+    width: 85px;
+    height: 27px;
+    line-height: 27px;
+    margin-right: 10px;
+    background-color: #ededf0;
+    text-align: center;
+}
+li.tab-btn-cur {
+    border: 1px solid #ccc;
+    border-bottom-color: #fff;
+    background-color: #fff;
+}
+.tab-con {
+    margin-top: -2px;
+    border: 1px solid #ccc;
+}
+.tab-con table {
+    width: 400px;
+    margin: 28px;
+}
+
+.project2 {
+    float: right;
+    width: 350px;
+    border: 1px solid #ccc;
+}
+.ab-wrap {
+    width: 280px;
+    margin: 0 auto;
+    padding-top: 10px;
+    text-indent: 2em;
+}
+.ab-1 {
+    padding: 6px 0;
+    border-bottom: 1px solid #ccc;
+}
+.ab-tt {
+    color: #666;
+}
+.ab-2 {
+    height: 44px;
+    line-height: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.ab-2-l {
+    float: left;
+    width: 93px;
+    height: 44px;
+    border-right: 1px solid #ccc;
+}
+.ab-3 {
+    height: 145px;
+    border-bottom: 1px solid #ccc;
+}
+.ab-search {
+    padding-top: 10px;
+    text-indent: 0;
+}
+.ab-search input {
+    vertical-align: middle;
+}
+.ab-search-btn {
+    float: right;
+    width: 50px;
+    height: 25px;
+    margin-top: -5px;
+    border: 0;
+    background-color: #388ac1;
+    color: #fff;
+}
 /**
  *  右边日历和汽车行业品牌
  *  by--刘恒志
@@ -170,6 +546,10 @@
 .main-con {
     width: 890px;
     margin: 0 auto;
+    padding-bottom: 20px;
+}
+.con-box4 {
+    margin-bottom: 20px;
 }
 .calender {
     float: left;
@@ -185,6 +565,7 @@
 }
 .con-wrap {
     padding: 0 15px 15px;
+    background-color: #fff;
 }
 .time-select {
     padding: 9px;
