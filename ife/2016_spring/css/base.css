@@ -1,3 +1,9 @@
+body {
+  font-family: sans-serif;
+  margin:0;
+  font-size: 14px;
+  vertical-align: middle;
+}
 .block {
   display:block;
 }
@@ -41,3 +47,98 @@
 .w300 {
   width: 300px;
 }
+
+.box {
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+/*
+*form
+*/
+
+form div+div {
+  margin-top:10px;
+}
+/*
+*这个类是为了在没有label的情形下 在form中给出对应的label的空间
+*/
+.nolabel {
+  padding-left: 90px;
+}
+label {
+  display:inline-block;
+  width:90px;
+  text-align: right;
+}
+/*
+*这个类是为了修复inline-block的间隙的问题  这个不是通用的解决的方案 求解这点
+*/
+.fix {
+  margin-left: .5em;
+}
+button,input,select,textarea {
+  font-family: inherit;/*某些元素不是默认继承父元素的font-family*/
+  font-size: 100%;
+}
+/*默认display:inline-block*/
+textarea {
+  vertical-align:top;
+}
+/*
+*按钮的样式定义
+*/
+.button { 
+  display: inline-block;
+  background-color:#2F79BA;
+  width:100px;
+  height:25px;
+  border:0 none;/*浏览器处理按钮的时候是有一个默认的border 在自己的button类中不设置border属性会有按钮移动的感觉 不知道是不是就是push
+  effect  这点理解的不好 求教    border 0 none  的区别是会不会去渲染的区别*/
+  box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  padding: 0;
+  border-radius: 5px;
+  color:white;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.button:focus {
+  outline: none;
+  
+}
+input[type=text] {
+  display:inline-block;
+  height:25px;
+  box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  padding: 0;
+  border:1px solid #DCDCDC;
+  vertical-align: middle;
+  
+}
+/*
+*表单元素验证invalid 设置invalid类
+*/
+.invalid {
+  color:#EB6C76;
+  border-color:#EB6C76;
+}
+/*
+*表单元素验证valid 设置valid类
+*/
+.valid {
+  color: green;
+  border-color: green;
+}
+/*
+*表单元素正常情况
+*/
+.normal {
+  color: #CFCFCF;
+  border-color: #CFCFCF;
+}
+
+

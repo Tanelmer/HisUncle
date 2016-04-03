@@ -39,6 +39,28 @@
       eventTarget['on'+ eventType] = null;
     }
   }
+  
+  //className 选择器 返回htmlcollection
+  base.getClass = function(father,className) {
+    var children = document.getElementsByTagName("*"),
+        length = children.length,
+        child = null,
+        elements = new Array(),
+        i = 0;
+
+    for(i = 0;i < length;i+=1) {
+      child = children[i];
+      var classNames = child.className.split(" ");
+      for(var j = 0,len = classNames.length;j < len;j+=1) {
+        if(classNames[j] === className) {
+          elements[elements.length] = child;
+          break;
+        }
+      }
+    }
+    return elements;
+  }
+
 
   //id选择器
   base.$ = function(id) {
@@ -82,7 +104,7 @@
             return;
         }
       }
-      newClass = oldClassNums + " " + classValue;
+      newClass = oldClass + " " + classValue;
       element.setAttribute("class",newClass);
     } else {
       element.setAttribute("class",classValue);  //如果元素之前的样式为空 直接设置值
@@ -104,6 +126,10 @@
       }
     
     }
+  }
+  //移除所有的class
+  base.removeAllClass = function(element) {
+    element.removeAttribute("class");
   }
 
   
