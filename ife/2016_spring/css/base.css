@@ -4,6 +4,7 @@ body {
   font-size: 14px;
   vertical-align: middle;
 }
+
 .block {
   display:block;
 }
@@ -52,6 +53,13 @@ body {
   -moz-box-sizing:border-box;
   -webkit-box-sizing:border-box;
   box-sizing:border-box;
+}
+
+.none {
+  display:none;
+}
+.show {
+  display:block;
 }
 
 /*
@@ -109,7 +117,7 @@ textarea {
   outline: none;
   
 }
-input[type=text] {
+input[type=text],input[type=password] {
   display:inline-block;
   height:25px;
   box-sizing:border-box;
