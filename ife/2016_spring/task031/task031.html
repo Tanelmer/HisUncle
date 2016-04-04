@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>task031</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+<style type="text/css">
+  section {
+    width:400px;
+    height:300px;
+    margin:0 auto;
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-top: -150px;
+    margin-left: -200px;
+  }
+
+</style>
+</head>
+<body>
+  <section>
+  	<form action="" id="test">
+  	  <div>
+  	    <p style="margin-left:96px;">
+  	  	  <label for="in_school" class="tl"><input type="radio" id="in_school" name="status"  />在校生</label>
+  	  	  <label for="out_school" class="ml20 tl"><input type="radio" id="out_school" name="status" checked="ckecked" />非在校生</label>
+  	  	</p>
+  	  </div>
+  	  <div class="tab none">
+  	  	<label>学校</label>
+  	  	<select name="city" id="city" class="w70">
+  	  	</select>
+  	  	<select name="school" id="school" class="ml20 w200">
+  	  	</select>
+  	  </div>
+  	  <div  class="tab none">
+  	  	<label for="work">就业单位</label>
+  	  	<input type="text" id="work" class="w300"/>
+  	  </div>
+  	</form>
+  </section>
+
+
+<script type="text/javascript" src="../js/sea.js"></script>
+<script type="text/javascript">
+  seajs.use('../task031/task031.js');
+</script>
+</body>
+</html>

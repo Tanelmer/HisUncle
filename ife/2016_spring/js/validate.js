@@ -3,6 +3,42 @@
 (function(win){
   var validate = {};
 
+  validate.checkNull = function(str) {
+    var ret = ['就业单位不能为空',"输入合格"];
+    if(str.length === 0) {
+      return {
+        status:0,
+        str:ret[0]
+      }
+    } else {
+      return {
+        status:1,
+        ret:[1]
+      }
+    }
+  }
+  
+
+  /*根据验证的状态 设置反应*/
+  validate.changeStatus = function(obj,checkitem) {
+    var tig = checkitem.nextElementSibling;
+    if(obj.status === 0) {
+      base.removeAllClass(tig);
+      base.addClass(tig,"invalid");
+      tig.textContent = obj.str;
+      checkitem.style.borderColor = "#EB6C76";
+    } else if(obj.status === 1) {
+      base.removeAllClass(tig);
+      base.addClass(tig,"invalid");
+      tig.textContent = obj.str;
+      checkitem.style.borderColor = "#EB6C76";
+    } else {
+      base.removeAllClass(tig);
+      base.addClass(tig,"valid");
+      tig.textContent = obj.str;
+      checkitem.style.borderColor = "green";
+    } 
+  }
 
   validate.checkName = function(str,minLength,maxLength) {
   	var ret = ['姓名不能为空','输入合格','请输入' + minLength + '-' + maxLength + '个字符']; 

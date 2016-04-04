@@ -9,6 +9,17 @@ body {
   display:block;
 }
 
+.tr {
+  text-align: right;
+}
+
+.tl {
+  text-align: left;
+}
+.tc {
+  text-align: center;
+}
+
 .inline-block {
   display:inline-block;
 }
@@ -24,6 +35,9 @@ body {
 .ml10 {
   margin-left:10px;
 }
+.ml50 {
+  margin-left: 50px;
+}
 .ml20 {
   margin-left: 20px;
 }
@@ -38,6 +52,13 @@ body {
 }
 .w {
   width:100%;
+}
+
+.w50 {
+  width:50px;
+}
+.w70 {
+  width:70px;
 }
 .w100 {
   width:100px;
