@@ -19,7 +19,7 @@ define(function(require, exports, module) {
 
   base.addEventListener(city_select,"change",function(event){
   	var evt = event || window.event;
-    changeSchool(evt.target.options.selectedIndex);
+    changeSchool(city_select.options.selectedIndex);
   });
   /*刷新初始化的选择信息*/
   for(var i = 0,len = radios.length;i < len;i+=1) {

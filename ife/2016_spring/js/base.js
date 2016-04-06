@@ -86,7 +86,6 @@
 
   base.test_input_null = function(text) {
     if(!text) {
-      alert("请输入内容");
       return false;
     }
     return true;
@@ -131,7 +130,11 @@
   base.removeAllClass = function(element) {
     element.removeAttribute("class");
   }
-
+  
+  base.randomNum = function(num) {
+    var ret = Math.floor(Math.random()*num);
+    return ret
+  }
   
 
   //判断数字是否在一个数组中 为了去重使用

@@ -100,6 +100,7 @@ label {
   display:inline-block;
   width:90px;
   text-align: right;
+  cursor: pointer;
 }
 /*
 *这个类是为了修复inline-block的间隙的问题  这个不是通用的解决的方案 求解这点
@@ -138,7 +139,7 @@ textarea {
   outline: none;
   
 }
-input[type=text],input[type=password] {
+input[type=text],input[type=password],input[type=checkbox]{
   display:inline-block;
   height:25px;
   box-sizing:border-box;
