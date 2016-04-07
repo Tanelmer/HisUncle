@@ -66,6 +66,7 @@ function drawObj(obj) {
 
 function move(obj,value) {
   var get_order = value.replace(/[ ]+/g,"");
+  
   switch(get_order) {
   	case "go":{
   	  var x = obj.positionX;
