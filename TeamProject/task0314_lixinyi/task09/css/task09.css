@@ -87,18 +87,12 @@
     position: relative;
 }
 .left-con{
-<<<<<<< HEAD
-/*    position: fixed;
-    left: 0;
-*/    width: 260px;
-    height: 100%;
-=======
+
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
     width: 260px;
->>>>>>> 337bb2f5dc9a9d1abf5990101c778cf706e25335
     background: #2B2E3D;
     color: #68778A;
 }
@@ -163,7 +157,7 @@
 .not{
     color: #68778A;
 }
-<<<<<<< HEAD
+
 
 
 /**
@@ -559,13 +553,11 @@ li.tab-btn-cur {
 .main-con {
     width: 890px;
     margin: 0 auto;
-<<<<<<< HEAD
-=======
+
     padding-bottom: 20px;
 }
 .con-box4 {
     margin-bottom: 20px;
->>>>>>> 337bb2f5dc9a9d1abf5990101c778cf706e25335
 }
 .calender {
     float: left;
@@ -581,10 +573,8 @@ li.tab-btn-cur {
 }
 .con-wrap {
     padding: 0 15px 15px;
-<<<<<<< HEAD
-=======
+
     background-color: #fff;
->>>>>>> 337bb2f5dc9a9d1abf5990101c778cf706e25335
 }
 .time-select {
     padding: 9px;
@@ -661,21 +651,7 @@ li.tab-btn-cur {
     padding: 17px 40px;
     background-color: #fff;
 }
-<<<<<<< HEAD
-.brand-con-wrap table {
-    width: 100%;
-    border: 1px solid #ccc;
-}
-.brand-con-wrap thead {
-    font-size: 13px;
-}
-.brand-con-wrap tbody tr:hover {
-    background-color: #eee;
-}
-.brand-con-wrap td {
-    height: 25px;
-    line-height: 25px;
-=======
+
 .persent-100 {
     display: inline-block;
     position: relative;
@@ -711,16 +687,13 @@ li.tab-btn-cur {
     text-align: center;
 }
 .row3 {
-<<<<<<< HEAD
-=======
+
     width: 330px;
->>>>>>> 337bb2f5dc9a9d1abf5990101c778cf706e25335
     text-indent: 30px;
 }
 .row3 span {
     vertical-align: middle;
 }
-<<<<<<< HEAD
 .persent-100 {
     display: inline-block;
     position: relative;
@@ -742,5 +715,3 @@ li.tab-btn-cur {
 .con-wrap {
     background-color: #fff;
 }
-=======
->>>>>>> 337bb2f5dc9a9d1abf5990101c778cf706e25335
