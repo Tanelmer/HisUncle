@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>task030</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+<style type="text/css">
+  section {
+    width:400px;
+    height:300px;
+    margin:0 auto;
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-top: -150px;
+    margin-left: -200px;
+
+  }
+  
+</style>
+</head>
+<body>
+  <section class="box">
+    <form action="" id="test">
+      <div>
+        <label for="name">名称:</label>
+        <input type="text" id="name" name="user_name" class="w300 item"/>
+        <p class="none" aria-live="polite" style="margin-left:96px;"></p> 
+      </div>
+      <div>
+        <label for="pass">密码:</label>
+        <input type="password" id="pass" name="user_pass" class="w300 item"/>
+        <p class="none" aria-live="polite" style="margin-left:96px;">请输入密码</p> 
+      </div>
+      <div>
+        <label for="pass_again">密码确认:</label>
+        <input type="password" id="pass_again" name="user_pass_agian" class="w300 item"/>
+        <p class="none" aria-live="polite" style="margin-left:96px;">请输入密码</p> 
+      </div>
+      <div>
+        <label for="email">邮箱:</label>
+        <input type="text" id="email" name="user_email" class="w300 item"/>
+        <p class="none" aria-live="polite" style="margin-left:96px;">请输入密码</p> 
+      </div>
+      <div>
+        <label for="phone">手机:</label>
+        <input type="text" id="phone" name="user_phone" class="w300 item"/>
+        <p class="none" aria-live="polite" style="margin-left:96px;">请输入密码</p> 
+      </div>  
+      <div class="nolabel">
+        <input type="button"  class="button fix" id="submit_btn" value="验证"/>
+      </div>
+    </form>
+  </section>
+  <script type="text/javascript" src="../js/base.js"></script>
+  <script type="text/javascript" src="task030.js"></script>
+  <script type="text/javascript" src="../js/validate.js"></script>
+</body>
+</html>

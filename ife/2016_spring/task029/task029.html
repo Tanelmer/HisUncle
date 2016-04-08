@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>task029</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+<style type="text/css">
+  section {
+    width:400px;
+    height:300px;
+    margin:0 auto;
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-top: -150px;
+    margin-left: -200px;
+
+  }
+</style>
+</head>
+<body>
+  <section class="box">
+    <form action="" id="test">
+      <div>
+        <label for="name">名称:</label>
+        <input type="text" id="name" name="user_name" autofocus class="w300"/>
+      </div>
+      <div class="nolabel">
+        <span class="normal" aria-live="polite" id="valid_part"  style="margin-left:.5em">必填,长度为4-16个字符</span> 
+        <!--在没有label的情形下  需要空出lable的位置 为了对齐  margin-left inline-block 中间的空隙 -->
+      </div>
+      <div class="nolabel">
+        <input type="button"  class="button fix" id="submit_btn" value="验证"/>
+      </div>
+      
+    </form>
+  </section>
+  <script type="text/javascript" src="../js/base.js"></script>
+  <script type="text/javascript" src="task029.js"></script>
+</body>
+</html>
