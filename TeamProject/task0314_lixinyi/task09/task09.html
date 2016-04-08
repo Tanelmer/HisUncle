@@ -1,68 +1,473 @@
 <!doctype html>
 <html>
-<head lang="en">
-    <!--声明当前页面的编码集：charset=gbk,gb2312(中文编码)，utf-8国际编码-->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <!--当前页面的三要素-->
-    <title>task09</title>
-    <meta name="Keywords" content="关键词,关键词">
-    <meta name="description" content="">
-    <meta name="author" content="elmer">
-    <!--css,js-->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/task09.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="shortcut icon" href="http://www.elmerlxy.com/team-ico.ico">
-</head>
-<body>
-    <div class="head">
-        <h1>HisUnlce</h1>
-        <div class="pull-right search">
-            <i class="iconfont icon-search"></i>
-            <input type="text"  placeholder="请输入。。">
-            <div class="pull-right login"><i class="iconfont icon-user"></i><a href="javascript:;">登录</a></div>
-        </div>
-    </div>
-    <div class="main">
-        <div class="left-con pull-left">
-            <div class="left-title">
-                <div class="head-con"><img src="http://www.elmerlxy.com/team-ico.ico" alt="logo" width="60" height="60"><span class="name">HisUncle</span></div>
-                <div class="head-info clearFix">
-                    <div class="pull-left">
-                        <p>110</p>
-                        <p>收藏</p>
-                    </div>
-                    <div class="pull-right border-right">
-                        <p>313</p>
-                        <p>粉丝</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item-list">
-                <ul>
-                    <li class="active">
-                        <i class="iconfont icon-folder-close"></i>个人报表
-                        <ul class="ul-f">
-                            <li class="not"><i class="iconfont icon-folder-close"></i>文件一</li>
-                            <li>
-                                <i class="iconfont icon-folder-open"></i>文件二
-                                <ul class="ul-f">
-                                    <li ><i class="iconfont icon-file"></i>文档二</li>
-                                    <li class="last-li not"><i class="iconfont icon-file"></i>文档三</li>
-                                </ul>
-                            </li>
-                            <li class="not"><i class="iconfont icon-folder-close"></i>文件三</li>
-                        </ul>
-                    </li>
-                    <li><i class="iconfont icon-star"></i>个人收藏</li>
-                    <li><i class="iconfont icon-share"></i>我的分享</li>
-                    <li><i class="iconfont icon-picture"></i>图库</li>
-                    <li><i class="iconfont icon-facetime-video"></i>成长记录</li>
-                    <li><i class="iconfont icon-home"></i>账户信息</li>
 
-                </ul>
-            </div>
+	<head lang="en">
+		<!--声明当前页面的编码集：charset=gbk,gb2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面的三要素-->
+		<title>task09</title>
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="description" content="">
+		<meta name="author" content="elmer">
+		<!--css,js-->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/task09.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="shortcut icon" href="http://www.elmerlxy.com/team-ico.ico">
+	</head>
 
+	<body>
+		<div class="head">
+			<h1>HisUnlce</h1>
+			<div class="pull-right search">
+				<i class="iconfont icon-search"></i>
+				<input type="text" placeholder="请输入。。">
+				<div class="pull-right login"><i class="iconfont icon-user"></i><a href="javascript:;">登录</a></div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="left-con pull-left">
+				<div class="left-title">
+					<div class="head-con"><img src="http://www.elmerlxy.com/team-ico.ico" alt="logo" width="60" height="60"><span class="name">HisUncle</span></div>
+					<div class="head-info clearFix">
+						<div class="pull-left">
+							<p>110</p>
+							<p>收藏</p>
+						</div>
+						<div class="pull-right border-right">
+							<p>313</p>
+							<p>粉丝</p>
+						</div>
+					</div>
+				</div>
+				<div class="item-list">
+					<ul>
+						<li class="active">
+							<i class="iconfont icon-folder-close"></i>个人报表
+							<ul class="ul-f">
+								<li class="not"><i class="iconfont icon-folder-close"></i>文件一</li>
+								<li>
+									<i class="iconfont icon-folder-open"></i>文件二
+									<ul class="ul-f">
+										<li><i class="iconfont icon-file"></i>文档二</li>
+										<li class="last-li not"><i class="iconfont icon-file"></i>文档三</li>
+									</ul>
+								</li>
+								<li class="not"><i class="iconfont icon-folder-close"></i>文件三</li>
+							</ul>
+						</li>
+						<li><i class="iconfont icon-star"></i>个人收藏</li>
+						<li><i class="iconfont icon-share"></i>我的分享</li>
+						<li><i class="iconfont icon-picture"></i>图库</li>
+						<li><i class="iconfont icon-facetime-video"></i>成长记录</li>
+						<li><i class="iconfont icon-home"></i>账户信息</li>
+
+					</ul>
+				</div>
+			</div>
+			
+
+			<div class="right-con">
+				<div class="main-con">
+					<div class="right">
+						<nav class="right-nav">
+							<a href="#" title="c站">C站  /</a>
+							<a href="#">个人报表  /</a>
+							<a href="#">文件一  /</a>
+							<a href="#" class="nav_active">文档一</a>
+						</nav><!--right-nav结束-->
+						<div class="right-search">
+							<div class="search-msg">
+								<label>查询项</label>
+								<input type="text" value="第一项" id="input1"/>
+							</div>
+							<div class="search-msg">
+								<div class="search-both">
+									<label>买方</label>
+									<input type="text" value="小A"/>
+								</div>
+								<div class="search-both">
+									<label>卖方</label>
+									<input type="text" value="小C"/>
+								</div>
+							</div>
+							<div class="search-msg">
+								<div class="search-other">
+									<label>日期</label>
+								    <input type="text" value="2016-03-01" class="count"/>
+								    <label>总耗时</label>
+								    <input type="text" value="8天"/>
+								    <label>人数</label>
+								    <input type="text" value="10人"/>
+								    <label>成交项</label>
+								    <input type="text" value="10项" class="count"/>
+								</div>
+							</div>
+							<div class="search-msg">
+								<input type="button" value="搜索" />
+							</div>
+						</div><!--right-search结束-->
+						
+						<div class="right-time">
+							<ul>
+								<li><span id="left"></span></li>
+								<li class="time hover"><h5>10:00 am</h5><p><i>￥</i>1200</p></li>
+								<li class="time"><h5>11:00 am</h5><p><i>￥</i>1300</p></li>
+								<li class="time"><h5>12:00 am</h5><p><i>￥</i>1200</p></li>
+								<li class="time"><h5>01:00 pm</h5><p><i>￥</i>1400</p></li>
+								<li class="time"><h5>02:00 pm</h5><p><i>￥</i>1500</p></li>
+								<li class="time"><h5>03:00 pm</h5><p><i>￥</i>1800</p></li>
+								<li><span id="right"></span></li>
+								<li class="history"><span>历史查询</span></li>
+							</ul>
+						</div><!--right-time结束-->
+						
+						<div class="right-account">
+							<h4>2016年4月份统计</h4>
+							<ul>
+								<li id="li1"><p>12345</p><a>成交量</a><span></span></li>
+								<li id="li2"><p>12345</p><a>成交量</a><span></span></li>
+								<li id="li3"><p>12345</p><a>成交量</a><span></span></li>
+								<li id="li4"><p>12345</p><a>成交量</a><span></span></li>
+							</ul>
+						</div>
+					</div><!--right结束-->
+
+					<!-- 右边两个“第一组项目”表格 -->
+	                <div class="con-box4 clearfix">
+	                    <div class="project1">
+	                        <div class="con-tt">第一组项目</div>
+	                        <div class="tb-con">
+	                            <div class="tb-wrap">
+	                                <ul class="tab-btn clearfix">
+	                                    <li class="tab-btn-cur">项目一</li>
+	                                    <li>项目二</li>
+	                                    <li>项目三</li>
+	                                    <li>项目四</li>
+	                                    <li>项目五</li>
+	                                </ul>
+	                                <div class="tab-con">
+	                                    <table border="1" cellspacing="0" class="calender-form">
+	                                        <tr>
+	                                            <td>购买材料一</td>
+	                                            <td>购买材料一</td>
+	                                            <td>购买材料一</td>
+	                                            <td>购买材料一</td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td>购买材料一</td>
+	                                            <td>购买材料一</td>
+	                                            <td>购买材料一</td>
+	                                            <td>购买材料一</td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td>购买材料一</td>
+	                                            <td>购买材料一</td>
+	                                            <td>购买材料一</td>
+	                                            <td>购买材料一</td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td>购买材料一</td>
+	                                            <td>购买材料一</td>
+	                                            <td>购买材料一</td>
+	                                            <td>购买材料一</td>
+	                                        </tr>
+	                                    </table>
+	                                </div>                                
+	                            </div>
+	                        </div>    
+	                    </div>
+
+	                    <div class="project2">
+	                        <div class="con-tt">第一组项目</div>
+	                        <div class="tb-con">
+	                            <div class="ab-wrap">
+	                                <div class="ab-1">
+	                                    <p class="ab-tt">标题</p>
+	                                    <p class="ab-text">项目报表三。。。</p>
+	                                </div>
+	                                <div class="ab-2 clearfix">
+	                                    <div class="ab-2-l">
+	                                        <p class="ab-tt">价格</p>
+	                                        <p class="ab-text">￥158</p>
+	                                    </div>
+	                                    <div class="ab-2-r">
+	                                        <p class="ab-tt">负责人</p>
+	                                        <p class="ab-text">小A</p>
+	                                    </div>
+	                                </div>
+	                                <div class="ab-3">
+	                                    <p class="ab-tt">详细描述</p>
+	                                    <p class="ab-text">该项目目前负责人...</p>
+	                                </div>
+	                                <div class="ab-search">
+	                                    <label>
+	                                        <input type="checkbox"> 遵守保密协议
+	                                    </label>
+	                                    <button class="ab-search-btn">搜索</button>
+	                                </div>
+	                            </div>
+	                        </div>    
+	                    </div>
+                	</div>
+					<!-- 右边日历和汽车行业品牌=======by 刘恒志 -->
+					<div class="con-box5 clearfix">
+						<div class="calender">
+							<div class="con-tt">日历</div>
+							<div class="tb-con">
+								<div class="con-wrap">
+									<div class="time-select">
+										<div class="time-year">
+											<ul>
+												<li>2016年</li>
+											</ul>
+											<i class="triangle"></i>
+										</div>
+										<div class="time-month">
+											<ul>
+												<li>4月</li>
+											</ul>
+											<i class="triangle"></i>
+										</div>
+										<div class="time-date">
+											<ul>
+												<li>标注日期</li>
+											</ul>
+											<i class="triangle"></i>
+										</div>
+										<div class="time-today">
+											<span>返回今天</span>
+										</div>
+									</div>
+									<div class="calender-main">
+										<table cellspacing="3">
+											<tr class="calender-head">
+												<th>一</th>
+												<th>二</th>
+												<th>三</th>
+												<th>四</th>
+												<th>五</th>
+												<th>六</th>
+												<th>七</th>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td class="fest">
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+												<td>
+													<span>2</span>
+													<span>廿五</span>
+												</td>
+												<td>
+													<span>3</span>
+													<span>廿六</span>
+												</td>
+											</tr>
+
+											<tr>
+												<td>
+													<span>4</span>
+													<span>廿七</span>
+												</td>
+												<td class="fest">
+													<span>5</span>
+													<span>清明节</span>
+												</td>
+												<td>
+													<span>6</span>
+													<span>廿九</span>
+												</td>
+												<td>
+													<span>7</span>
+													<span>三月</span>
+												</td>
+												<td class="date-today">
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+												<td>
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+												<td>
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="fest">
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+												<td>
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+												<td>
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+												<td>
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+												<td>
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+												<td>
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+												<td>
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="fest">
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+												<td>
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+												<td>
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+												<td>
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+												<td>
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+												<td>
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+												<td>
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+											</tr>
+											<tr>
+												<td class="fest">
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+												<td>
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+												<td>
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+												<td>
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+												<td>
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+												<td>
+													<span>1</span>
+													<span>愚人节</span>
+												</td>
+												<td></td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+
+						<div class="brand">
+							<div class="con-tt">汽车行业品牌榜</div>
+							<div class="tb-con">
+								<div class="brand-con-wrap">
+									<table border="1" cellspacing="0" class="calender-form">
+										<thead>
+											<tr>
+												<th class="row1">排名</th>
+												<th class="row2">品牌</th>
+												<th class="row3">搜索指数</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="row1">1</td>
+												<td class="row2">大众</td>
+												<td class="row3">
+													<span>48912002</span>
+													<span class="persent-100"><i class="persent-80"></i></span>
+												</td>
+											</tr>
+											<tr>
+												<td class="row1">1</td>
+												<td class="row2">大众</td>
+												<td class="row3">
+													<span>48912002</span>
+													<span class="persent-100"><i class="persent-80"></i></span>
+												</td>
+											</tr>
+											<tr>
+												<td class="row1">1</td>
+												<td class="row2">大众</td>
+												<td class="row3">
+													<span>48912002</span>
+													<span class="persent-100"><i class="persent-80"></i></span>
+												</td>
+											</tr>
+											<tr>
+												<td class="row1">1</td>
+												<td class="row2">大众</td>
+												<td class="row3">
+													<span>48912002</span>
+													<span class="persent-100"><i class="persent-80"></i></span>
+												</td>
+											</tr>
+											<tr>
+												<td class="row1">1</td>
+												<td class="row2">大众</td>
+												<td class="row3">
+													<span>48912002</span>
+													<span class="persent-100"><i class="persent-80"></i></span>
+												</td>
+											</tr>
+											<tr>
+												<td class="row1">1</td>
+												<td class="row2">大众</td>
+												<td class="row3">
+													<span>48912002</span>
+													<span class="persent-100"><i class="persent-80"></i></span>
+												</td>
+											</tr>
+										</tbody>
+
+									</table>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
         </div>
 
         <div class="right-con">
