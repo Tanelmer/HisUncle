@@ -1,0 +1,30 @@
+#test {
+  display:flex;
+  display:-moz-flex;
+  display:-webkit-flex;
+  flex-direction:row;
+  width:60%; 
+}
+
+#left {
+  background: gray;
+  color:white;
+  flex:1;
+  -moz-flex:1;
+  -webkit-flex:1;
+}
+#right {
+  flex:20;
+  -moz-flex:20;
+  -webkit-flex:20;
+}
+#input_order {
+  background: black;
+  color:green;
+  padding: 0;
+  border:0;
+}
+
+
+
+

@@ -90,6 +90,15 @@
     }
     return true;
   }
+  /*判断一个输入是否包含数字*/
+  base.test_input_num = function(text) {
+    if(text.match(/[0-9]+/)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 
   //为一个元素节点增加class
   base.addClass = function(element,classValue) {

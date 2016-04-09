@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>task035</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+<link rel="stylesheet" href="task035.css" type="text/css">
+</head>
+<body>
+  <section>
+  	<canvas id="canvas" height="300" width="300">
+  	
+  	</canvas>  <!-- 通过css设置宽高会有一定的问题 -->
+
+  </section>
+  <section >
+  	<label for="go">指令:</label><input type="text" id="go" />
+    <lable for="min">指令执行时间:</label><input type="text" id="min" placeholder="秒为单位"/>
+  	<input type="button" class="button" value="执行" id="run" />
+  </section>
+  <section >
+  	<p class="valid">tun lef 向左旋转90  tun rig 向右旋转90 tun bac 向后转  tra rig 向左侧移动一格 tra lef 向屏幕右侧移动一格  tra top 向屏幕上侧移动一格 tra bot 向屏幕下侧移动一格  mov lef 把方向向左 移动一格 同理 mov top mov rig mov bot  </p>
+  </section>
+  <section>
+    <div id="test" class="box">
+      <div id="left" class="box tc">
+        <div>0</div>
+      </div>
+      <div id="right" class="box">
+        <textarea name="" id="input_order" cols="30" rows="11"></textarea>
+        <input type="button" class="button" value="开始" id="test_btn"/>
+        <input type="button" class="button" value="重置" id="reset" />
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript" src="../js/sea.js"></script>
+  <script type="text/javascript">
+    seajs.use('../task035/task035.js');
+  </script>
+</body>
+</html>
