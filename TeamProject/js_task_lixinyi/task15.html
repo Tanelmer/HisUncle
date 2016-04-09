@@ -67,7 +67,6 @@
         return data;
 
     }
-    console.log(getData());
 
     /**
      * sortAqiData
@@ -75,16 +74,22 @@
      * 返回一个排序后的数组
      */
     function sortAqiData(data) {
-
+        data.sort(function(a,b){return a[1]-b[1];})
+        return data;
     }
-
     /**
      * render
      * 将排好序的城市及空气质量指数，输出显示到id位resort的列表中
      * 格式见ul中的注释的部分
      */
     function render(data) {
-
+        var resort=document.getElementById("resort");
+        var listr='';
+        //            <li>第一名：北京空气质量：<b>90</b></li>
+        for(var i=0;i<data.length;i++){
+            listr+='<li>第'+(i+1)+'名：'+data[i][0]+'空气质量：<b>'+data[i][1]+'</b></li>';
+        }
+        resort.innerHTML=listr;
     }
 
     function btnHandle() {
@@ -97,7 +102,7 @@
     function init() {
 
         // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
-
+        document.getElementById("sort-btn").onclick=btnHandle;
     }
 
     init();
