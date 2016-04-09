@@ -399,38 +399,37 @@ function move(obj,value,sec) {
 
 }
 
-var btn = base.$("run");
-base.addEventListener(btn,"click",function(event){
-  var evt = event || window.event,
-      text = base.$("go"),
-      value = base.trim(text.value).toLowerCase(),
-      sec = base.trim(base.$("min").value);
-  if(!base.test_input_null(value)) {
-  	alert("您没有输入指令");
-  	return false;
-  }
-  if(!base.test_num(sec)) {
-    alert("请输入正确的时间");
-    return false;
-  }
-  move(obj,value,sec);
 
-});
 
 var test_btn = base.$("test_btn");
 var textarea = base.$("input_order");
 var index = 0;
 base.addEventListener(test_btn,"click",function(event){
+  
+  /*重置左边的颜色*/
+  var children = base.$("left").children;
+  for(var i = 0,len=children.length;i < len;i++){
+   children[i].style.background = "gray"; 
+  }
   var evt = event || window.event;
-  var value = base.trim(textarea.value);
+  var value = base.trim(textarea.value);  /*多个换行符的处理*/
   var order_num = value.split('\n');
-  var sec = parseInt(base.trim(base.$("min").value)); 
+  var sec = parseInt(base.trim(base.$("min").value)) || 1; 
   var timer = setInterval(function(){
     var order = order_num.shift();
-
+    if(move(obj,order,sec) == false) {
+      base.$("left").children[index].style.background = "red";
+      clearInterval(timer);
+      index = 0;
+      return false;
+    } else {
+      base.$("left").children[index].style.background = "green";
+      index += 1;
+    }
     /*move(obj,order,sec);*/
     if(order_num.length === 0) {
       clearInterval(timer);
+      index = 0;
     }
   },1000*sec);
   
