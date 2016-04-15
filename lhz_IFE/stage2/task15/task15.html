@@ -97,15 +97,15 @@ function btnHandle() {
   render(aqiData);
 }
 
-btnHandle()
-// function init() {
 
-//   // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
-//   var sortBtn = document.getElementById('sort-btn');
-//   sortBtn.addEventListener(onclick, btnHandle);
-// }
+function init() {
 
-// init();
+  // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
+  var sortBtn = document.getElementById('sort-btn');
+  sortBtn.addEventListener('click', btnHandle);
+}
+
+init();
 
 </script>
 </body>
