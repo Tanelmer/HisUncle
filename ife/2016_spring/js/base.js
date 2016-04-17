@@ -42,7 +42,7 @@
   
   //className 选择器 返回htmlcollection
   base.getClass = function(father,className) {
-    var children = document.getElementsByTagName("*"),
+    var children = father.getElementsByTagName("*"),
         length = children.length,
         child = null,
         elements = new Array(),
@@ -83,20 +83,30 @@
       return false;
     }
   }
-
+  //这里导师给出了意见 命名方式的问题   判断输入是否为空 之后的都用下面的函数
   base.test_input_null = function(text) {
     if(!text) {
       return false;
     }
     return true;
   }
-  /*判断一个输入是否包含数字*/
-  base.test_input_num = function(text) {
-    if(text.match(/[0-9]+/)) {
+
+  base.test_input = function(text) {
+    if(!text) {
       return true;
-    } else {
-      return false;
     }
+    return false;
+  }
+  /**
+  *@method test_input_num
+  *@param String text 
+  *@return Boolean 是否包含数字
+  */
+  base.test_input_num = function(text) {
+    if(text === "") {
+      return false;
+    } 
+   return text.match(/[0-9]+/);
   }
 
 
