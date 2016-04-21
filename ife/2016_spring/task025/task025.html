@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+<link rel="stylesheet" type="text/css" href="task025.css">
+</head>
+<body>
+<section class="mt20 tc">
+	<input type="button" class="button" value="删除节点" id="delete_btn"/>
+	<input type="text" placeholder="增加节点的值,多个节点以逗号分隔" class="w300"  id="add_text" />
+	<input type="button" class="button" value="增加节点" id="add_btn" />
+	
+</section>
+<div id="root" class="iconfont">
+  <div class="son">
+    <span>上衣</span>
+    <div class="son"><span>短袖</span></div>
+    <div class="son"><span>毛衣</span></div>
+  </div>
+  <div class="son">
+    <span>裤子</span>
+    <div class="son"><span>牛仔裤</span></div>
+    <div class="son"><span>短裤</span></div>
+  </div>
+  <div class="son">
+    <span>其他</span>
+  </div>
+</div>
+<script type="text/javascript" src="../js/sea.js"></script>
+<script type="text/javascript">
+	seajs.use('../task025/task025.js');
+</script>
+</body>
+</html>

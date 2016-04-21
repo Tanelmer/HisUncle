@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+</head>
+<body>
+<input type="button" class="button" value="click" id="test"/>
+<script type="text/javascript" src="../js/base.js"></script>
+<script type="text/javascript">
+  var btn = base.$("test");
+
+  base.addEventListener(btn,"click",function(){
+  	console.log(1);
+  });
+  base.addEventListener(btn,"click",function(){
+  	console.log(2);
+  });
+</script>
+</body>
+</html>
