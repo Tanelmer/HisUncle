@@ -5,6 +5,7 @@ define(function(require,exports,module){
 /*
 深度优先遍历
 */
+
 function traverseDF(node,list) {
   (function recurse(currentNode){
     for(var i = 0,length = currentNode.children.length;i < length;i+=1) {
@@ -29,40 +30,7 @@ function traverseBF(node,list) {
     currentTree = queue.dequeue();
   }
 }
-var draw = false;
-var find = false;
-function render(list,text,speed) {
-  var i = 0,
-      length = list.length,
-      timer = null;
-  
-  timer = setInterval(function(){
-    draw = true;
-    if(i < length) {
-      var temp = i;
-      if(i > 0) {
-        list[temp-1].style.background = "white";
-      }
-      list[i].style.background = "red";
-      if(list[i].firstChild.textContent.indexOf(text) != -1  && text != "") {
-        clearInterval(timer);
-        list[i].style.background = "green";
-        find = true;
-        draw = false;
-      }
-      i++;
-    } else {
-      clearInterval(timer);
-      list[length-1].style.background = "white";
-      draw = false;
-      if(find == false && text != "") {
-        alert("没有找到");
-      }
 
-    }
-  },speed);
-  
-}
 
 function reset() {
   var list = [],
@@ -92,8 +60,11 @@ var deleteNode = null;
 function bindEvent() {
   var root = base.$("root"),
       delete_btn = base.$("delete_btn"),
-      add_btn = base.$("add_btn");
-  
+      add_btn = base.$("add_btn"),
+      search_btn = base.$("search_btn"),
+      add_text = base.$("add_text"),
+      search_text = base.$("search_text");
+
  
 
 
@@ -144,7 +115,7 @@ function bindEvent() {
       return false;
     }
     var parent = deleteNode.parentNode;
-    parent.removeChild(deleteNode);
+    root.removeChild(deleteNode);
     deleteNode = null;
   });
   
@@ -153,6 +124,8 @@ function bindEvent() {
       alert("您没有选中节点");
       return false;
     }
+
+    
     var get_text = base.trim(add_text.value);
     if(get_text == "") {
       alert("您没有输入内容");
@@ -165,6 +138,28 @@ function bindEvent() {
 
   });
 
+  base.addEventListener(search_btn,"click",function(){
+    var get_text = base.trim(search_text.value);
+    if(get_text == "") {
+      alert("您没有输入内容");
+      return false;
+    }
+    var list = []
+    traverseBF(root,list);
+    for(var i = 0,len = list.length;i < len;i+=1) {
+      if(list[i].innerHTML == get_text) {
+        var parent = list[i].parentNode;
+        reset();
+        parent.style.background = "blue";
+        deleteNode = parent;
+        var children = parent.children;
+        for(var i = 1,len = children.length;i < len;i+=1) {
+          children[i].style.display = "block";
+        }
+      }
+    }
+    list = [];
+  });
 
 }
 
