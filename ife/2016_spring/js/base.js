@@ -27,6 +27,27 @@
       eventTarget['on'+eventType] = handler;
     }
   }
+  /*
+  *获取输入的长度
+  *@param text 输入的值
+  *return Number  输入字符的长度
+  */ 
+  base.getInputNum = function(text) {
+    if(!text) {
+      console.log("invalid");
+    } else {
+      var len = text.length,
+          result = 0;
+      for(var i = 0;i < len;i+=1) {
+        if(text[i].match(/[\u4E00-\u9FA5\uf900-\ufa2d]/)) {
+          result += 2;
+        } else {
+          result += 1;
+        }
+      }
+      return result;   
+    }
+  }
 
   //跨浏览器的移除事件函数
   base.removeListenEvent = function(eventTarget,eventType,handler){
@@ -72,9 +93,13 @@
     return str.replace(/^\s+|\s+$/g,''); 
   }
 
-  //判断输入是否由数字组成
+  /*
+  *function 判断输入是否为数字
+  *@param num 输入
+  *return Boolean 是否由数字组成
+  */
   base.test_num = function(num) {
-    if(!num) {
+    if(num === undefined) {
     return false;
     }
     if(num.match(/^[0-9]+$/)) {
