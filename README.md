@@ -11,7 +11,7 @@ PS(貌似咱们菜鸟不用写的这么高端=。=)
 -------------
 
 ## 关于团队组建 
-  人员：李欣羿，李雪艳，王晓朦，刘恒志，孙浩
+  人员：lixinyi，lxy，wxm，lhz，sh
 ##Github地址https://github.com/Tanelmer/HisUncle
 ##demo地址http://webcafe.pub/ife/stage1/
 ##Github项目README.md模板  
